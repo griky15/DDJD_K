@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://bj6i1l2e2ojsn"]
+
+[ext_resource type="Texture2D" uid="uid://bv3obasc3bv5p" path="res://Textures/red.jpg" id="1_bwmrb"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_yu11i"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_kjg36"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o7bb3"]
+albedo_texture = ExtResource("1_bwmrb")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_oxf3o"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_yu11i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_kjg36")
+surface_material_override/0 = SubResource("StandardMaterial3D_o7bb3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_oxf3o")
