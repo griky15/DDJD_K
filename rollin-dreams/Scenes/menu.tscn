@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2rfxret8lfjt"]
+
+[ext_resource type="Texture2D" uid="uid://caibf78d64qek" path="res://Textures/menu.jpg" id="1_ywvcd"]
+[ext_resource type="Script" path="res://Scripts/to_lvl1.gd" id="2_82kfo"]
+
+[node name="Menu" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1138.0
+offset_bottom = 682.0
+texture = ExtResource("1_ywvcd")
+expand_mode = 1
+
+[node name="Level1" type="Button" parent="."]
+offset_left = 478.0
+offset_top = 263.0
+offset_right = 639.0
+offset_bottom = 303.0
+text = "Level 1"
+script = ExtResource("2_82kfo")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 477.0
+offset_top = 338.0
+offset_right = 642.0
+offset_bottom = 376.0
+text = "Level 2
+"
+
+[connection signal="pressed" from="Level1" to="Level1" method="_on_pressed"]
