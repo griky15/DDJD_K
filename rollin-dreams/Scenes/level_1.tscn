@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dteha4jmswwlv"]
+[gd_scene load_steps=5 format=3 uid="uid://dteha4jmswwlv"]
 
+[ext_resource type="Script" path="res://Scripts/camera_3d.gd" id="1_cqm10"]
 [ext_resource type="PackedScene" uid="uid://bj6i1l2e2ojsn" path="res://Scenes/Player.tscn" id="1_gvtya"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wxr5m"]
@@ -8,9 +9,6 @@
 size = Vector3(1.92767, 0.51532, 1.95776)
 
 [node name="Level1" type="Node3D"]
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 6, 10)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -22,7 +20,13 @@ mesh = SubResource("PlaneMesh_wxr5m")
 transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0.218353, -3.6351, 0.411987)
 shape = SubResource("BoxShape3D_ka7dr")
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("1_gvtya")]
+[node name="Player" parent="." instance=ExtResource("1_gvtya")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 40, 0)
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, -30, 2, 0)
+light_energy = 3.0
+
+[node name="PlayerCam" type="Camera3D" parent="."]
+current = true
+script = ExtResource("1_cqm10")
+target = NodePath("../Player")
