@@ -2,7 +2,7 @@ extends Camera3D
 
 @export var target: NodePath  # O jogador (bola)
 @export var follow_speed := 5.0  # A velocidade de seguimento da câmera
-@export var offset := Vector3(0, 3, 10)  # Distância da câmera em relação ao jogador
+@export var offset := Vector3(0, 2, 8)  # Distância da câmera em relação ao jogador
 
 var target_node: Node3D
 

@@ -6,24 +6,24 @@
 [node name="Menu" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1138.0
-offset_bottom = 682.0
+offset_right = 2039.0
+offset_bottom = 1055.0
 texture = ExtResource("1_ywvcd")
 expand_mode = 1
 
 [node name="Level1" type="Button" parent="."]
-offset_left = 478.0
-offset_top = 263.0
-offset_right = 639.0
-offset_bottom = 303.0
+offset_left = 867.0
+offset_top = 382.0
+offset_right = 1085.0
+offset_bottom = 433.0
 text = "Level 1"
 script = ExtResource("2_82kfo")
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 477.0
-offset_top = 338.0
-offset_right = 642.0
-offset_bottom = 376.0
+offset_left = 868.0
+offset_top = 480.0
+offset_right = 1086.0
+offset_bottom = 531.0
 text = "Level 2
 "
 
