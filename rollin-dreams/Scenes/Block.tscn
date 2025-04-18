@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=4 uid="uid://b17cx1un7ugcf"]
+
+[ext_resource type="PackedScene" uid="uid://dfphstixjpvri" path="res://Object/block.glb" id="1_4mhwq"]
+[ext_resource type="Texture2D" uid="uid://bbhqsmw5a3bh3" path="res://Textures/block2.webp" id="2_u815c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r1u0x"]
+albedo_texture = ExtResource("2_u815c")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rykup"]
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.5, 1, 1, 1),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AQAAAAMABAAAAAEAAAACAAMAAgAAAAQAAQADAAcABQAEAAEABQABAAcAAwACAAcABgACAAQAAgAGAAcABgAEAAUABwAGAAUA"),
+"lods": [0.5, PackedByteArray("AQAAAAMABAAAAAEAAAACAAMAAgAAAAQABwACAAQAAQADAAcABAABAAcAAwACAAcA"), 0.632456, PackedByteArray("AAADAAcABwAAAAQAAwAAAAcABAAAAAcA")],
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAvwAAAL8AAAC/AAAAvwAAAL8AAAA/AAAAvwAAAD8AAAC/AAAAvwAAAD8AAAA/AAAAPwAAAL8AAAC/AAAAPwAAAL8AAAA/AAAAPwAAAD8AAAC/AAAAPwAAAD8AAAA/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5ynyk"]
+resource_name = "block_geometry_0"
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.5, 1, 1, 1),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AQAAAAMABAAAAAEAAAACAAMAAgAAAAQAAQADAAcABQAEAAEABQABAAcAAwACAAcABgACAAQAAgAGAAcABgAEAAUABwAGAAUA"),
+"lods": [0.5, PackedByteArray("FAAQABoAHgARABUAEgAYABsAGAATAB8AIgAYACEAFgAcACIAIAAXACMAHQAZACQA"), 0.632456, PackedByteArray("CAAKAA4ADgAIAA0ACwAIAA4ADAAJAA8A")],
+"material": SubResource("StandardMaterial3D_r1u0x"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 37,
+"vertex_data": PackedByteArray("AAAAvwAAAL8AAAC/AAAAvwAAAL8AAAA/AAAAvwAAAD8AAAC/AAAAvwAAAD8AAAA/AAAAPwAAAL8AAAC/AAAAPwAAAL8AAAA/AAAAPwAAAD8AAAC/AAAAPwAAAD8AAAA/AAAAvwAAAL8AAAC/AAAAvwAAAL8AAAC/AAAAvwAAAD8AAAA/AAAAvwAAAD8AAAA/AAAAPwAAAL8AAAC/AAAAPwAAAL8AAAC/AAAAPwAAAD8AAAA/AAAAPwAAAD8AAAA/AAAAvwAAAL8AAAC/AAAAvwAAAL8AAAC/AAAAvwAAAL8AAAC/AAAAvwAAAL8AAAC/AAAAvwAAAL8AAAA/AAAAvwAAAL8AAAA/AAAAvwAAAL8AAAA/AAAAvwAAAL8AAAA/AAAAvwAAAD8AAAC/AAAAvwAAAD8AAAC/AAAAvwAAAD8AAAA/AAAAvwAAAD8AAAA/AAAAvwAAAD8AAAA/AAAAvwAAAD8AAAA/AAAAPwAAAL8AAAC/AAAAPwAAAL8AAAC/AAAAPwAAAL8AAAC/AAAAPwAAAL8AAAC/AAAAPwAAAD8AAAA/AAAAPwAAAD8AAAA/AAAAPwAAAD8AAAA/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_rykup")
+
+[node name="block" instance=ExtResource("1_4mhwq")]
+
+[node name="geometry_0" parent="world" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00134921, 0.0054816, -0.000782907)
+mesh = SubResource("ArrayMesh_5ynyk")

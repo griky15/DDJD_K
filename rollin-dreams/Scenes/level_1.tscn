@@ -35,6 +35,9 @@ sky_material = SubResource("PanoramaSkyMaterial_ca8up")
 [sub_resource type="Environment" id="Environment_dx338"]
 background_mode = 2
 sky = SubResource("Sky_g2ufi")
+glow_enabled = true
+glow_intensity = 1.2
+glow_bloom = 0.2
 
 [node name="Level1" type="Node3D"]
 

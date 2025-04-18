@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://02cgbrhhuuol"]
+
+[ext_resource type="PackedScene" uid="uid://clpvke7snbkuo" path="res://Object/star.glb" id="1_mprc6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_203c1"]
+albedo_color = Color(1, 0.972549, 0.458824, 1)
+emission_enabled = true
+emission = Color(1, 0.94902, 0.615686, 1)
+emission_energy_multiplier = 5.0
+
+[node name="star" instance=ExtResource("1_mprc6")]
+
+[node name="geometry_0" parent="world" index="0"]
+material_override = SubResource("StandardMaterial3D_203c1")
