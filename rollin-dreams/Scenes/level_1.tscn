@@ -1,11 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://dteha4jmswwlv"]
+[gd_scene load_steps=14 format=3 uid="uid://dteha4jmswwlv"]
 
 [ext_resource type="Script" path="res://Scripts/camera_3d.gd" id="1_cqm10"]
 [ext_resource type="PackedScene" uid="uid://bj6i1l2e2ojsn" path="res://Scenes/Player.tscn" id="1_gvtya"]
 [ext_resource type="Texture2D" uid="uid://d3wt0fipymvwk" path="res://Textures/industrial_sunset_puresky_2k.exr" id="3_6swl5"]
+[ext_resource type="Script" path="res://show_label.gd" id="4_jdenl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ka7dr"]
-size = Vector3(10, 0.515, 10)
+size = Vector3(8.99084, 0.515, 24.4216)
 
 [sub_resource type="GDScript" id="GDScript_fyi2b"]
 script/source = "extends CollisionShape3D
@@ -22,9 +23,15 @@ func _process(delta: float) -> void:
 "
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_aoidu"]
+size = Vector2(2, 5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8rlk2"]
 albedo_color = Color(0.05, 0.461667, 1, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_513s0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_574u4"]
+size = Vector3(5.01428, 1, 6.0361)
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ca8up"]
 panorama = ExtResource("3_6swl5")
@@ -41,29 +48,78 @@ glow_bloom = 0.2
 
 [node name="Level1" type="Node3D"]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="Ground" type="StaticBody3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0.218353, -3.6351, 0.411987)
+[node name="Ground1Collision" type="CollisionShape3D" parent="Ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 2.74124, -3.6351, 56.3869)
 shape = SubResource("BoxShape3D_ka7dr")
 script = SubResource("GDScript_fyi2b")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(75, 0, 0, 0, 75, 0, 0, 0, 75, 0, 0, 0)
+[node name="Ground1" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 4.97069, -3.16587, 53.1203)
 mesh = SubResource("PlaneMesh_aoidu")
 surface_material_override/0 = SubResource("StandardMaterial3D_8rlk2")
 
+[node name="Ramp1" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(30, 0, 0, 0, 25.1601, -16.3391, 0, 16.3391, 25.1601, 2.18248, -7.64058, -21.7744)
+mesh = SubResource("PlaneMesh_513s0")
+
+[node name="Ramp1Collision" type="CollisionShape3D" parent="Ground"]
+transform = Transform3D(10, 0, 0, 0, 8.3867, -5.44639, 0, 5.44639, 8.3867, 2.2135, -11.1362, -25.6076)
+shape = SubResource("BoxShape3D_574u4")
+
+[node name="Ramp2" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(30, 0, 0, 0, 28.1908, 10.2606, 0, -10.2606, 28.1908, 2.18248, -38.7041, 0.298866)
+mesh = SubResource("PlaneMesh_513s0")
+
+[node name="Ramp2Collision" type="CollisionShape3D" parent="Ground"]
+transform = Transform3D(10, 0, 0, 0, 9.39693, 3.4202, 0, -3.4202, 9.39693, 2.2135, -44.1937, -0.925262)
+shape = SubResource("BoxShape3D_574u4")
+
+[node name="Ground2" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 4.97069, -48.7649, -74.1608)
+mesh = SubResource("PlaneMesh_aoidu")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_8rlk2")
+
+[node name="Ground1Collision2" type="CollisionShape3D" parent="Ground"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 2.74124, -49.897, -76.7781)
+shape = SubResource("BoxShape3D_ka7dr")
+script = SubResource("GDScript_fyi2b")
+
 [node name="Player" parent="." instance=ExtResource("1_gvtya")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 70)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 107.443)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, -30, 2, 0)
 light_energy = 1.5
 
 [node name="PlayerCam" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 108.972)
 current = true
 script = ExtResource("1_cqm10")
 target = NodePath("../Player")
 
 [node name="Sky" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_dx338")
+
+[node name="JumpLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.998728, -0.0504189, 0, 0.0504189, 0.998728, 0, 14.6839, 39.7286)
+pixel_size = 0.05
+text = "PRESS SPACE TO JUMP!"
+script = ExtResource("4_jdenl")
+
+[node name="RollLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.0847, 65.5597)
+pixel_size = 0.05
+text = "Use the arrows to move!"
+
+[node name="DownLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.998728, -0.0504189, 0, 0.0504189, 0.998728, 0.0557709, 22.9504, -25.9139)
+pixel_size = 0.1
+text = "Down we go!"
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -32.5633, -26.1614)
+pixel_size = 0.15
+text = "LEVEL 1"
