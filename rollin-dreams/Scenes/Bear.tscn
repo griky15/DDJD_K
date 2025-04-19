@@ -1,0 +1,116 @@
+[gd_scene load_steps=13 format=3 uid="uid://chgsay7pg68e4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qhcxl"]
+albedo_color = Color(1, 0.792157, 0.709804, 1)
+rim_enabled = true
+rim = 0.2
+disable_receive_shadows = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_0sh2j"]
+material = SubResource("StandardMaterial3D_qhcxl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2vrxv"]
+albedo_color = Color(0.498867, 0.181008, 2.88785e-07, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_nhu5q"]
+material = SubResource("StandardMaterial3D_2vrxv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qwshh"]
+albedo_color = Color(1, 0.94902, 1, 1)
+rim_enabled = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_yvur7"]
+material = SubResource("StandardMaterial3D_qwshh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fr4i2"]
+albedo_color = Color(0.498039, 0.180392, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_67lmj"]
+material = SubResource("StandardMaterial3D_fr4i2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o1gh8"]
+albedo_color = Color(1, 0.792157, 0.709804, 1)
+rim_enabled = true
+rim = 0.2
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ejfy0"]
+material = SubResource("StandardMaterial3D_o1gh8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p4hdl"]
+albedo_color = Color(1, 0.792157, 0.709804, 1)
+rim_enabled = true
+rim = 0.05
+rim_tint = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_gnjo5"]
+material = SubResource("StandardMaterial3D_p4hdl")
+
+[node name="bear" type="Node3D"]
+
+[node name="body" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+mesh = SubResource("SphereMesh_0sh2j")
+
+[node name="head" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+mesh = SubResource("SphereMesh_0sh2j")
+
+[node name="foot1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.25, -0.15, 0.35)
+mesh = SubResource("SphereMesh_0sh2j")
+
+[node name="foot2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.25, -0.15, 0.35)
+mesh = SubResource("SphereMesh_0sh2j")
+
+[node name="nose" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.75, 0.55)
+mesh = SubResource("SphereMesh_nhu5q")
+
+[node name="face" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.7, 0.35)
+mesh = SubResource("SphereMesh_yvur7")
+
+[node name="ear1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.3, 1, 0)
+mesh = SubResource("SphereMesh_0sh2j")
+
+[node name="ear2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.3, 1, 0)
+mesh = SubResource("SphereMesh_0sh2j")
+
+[node name="eye1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0.2, 0.85, 0.42)
+mesh = SubResource("SphereMesh_nhu5q")
+
+[node name="eye2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, -0.2, 0.85, 0.42)
+mesh = SubResource("SphereMesh_nhu5q")
+
+[node name="mouth" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0, 0.68, 0.55)
+mesh = SubResource("CapsuleMesh_67lmj")
+
+[node name="arm1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.229431, 0.327661, 0, -0.327661, 0.229431, 0, 0, 0, 0.4, -0.25, 0.1, 0)
+mesh = SubResource("CapsuleMesh_ejfy0")
+
+[node name="arm2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.229431, -0.327661, 0, 0.327661, 0.229431, 0, 0, 0, 0.4, 0.25, 0.1, 0)
+mesh = SubResource("CapsuleMesh_ejfy0")
+
+[node name="foot1_1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.36, 0, 0, 0, 0.36, 0, 0, 0, 0.36, -0.25, -0.15, 0.38)
+mesh = SubResource("SphereMesh_gnjo5")
+
+[node name="foot2_1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.36, 0, 0, 0, 0.36, 0, 0, 0, 0.36, 0.25, -0.15, 0.38)
+mesh = SubResource("SphereMesh_gnjo5")
+
+[node name="ear1_1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.3, 1, 0.07)
+mesh = SubResource("SphereMesh_gnjo5")
+
+[node name="ear2_1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.3, 1, 0.07)
+mesh = SubResource("SphereMesh_gnjo5")
