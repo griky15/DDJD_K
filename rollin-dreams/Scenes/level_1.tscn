@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=3 uid="uid://dteha4jmswwlv"]
 
-[ext_resource type="Script" path="res://Scripts/camera_3d.gd" id="1_cqm10"]
+[ext_resource type="Script" uid="uid://716ri8bqpdqt" path="res://Scripts/camera_3d.gd" id="1_cqm10"]
 [ext_resource type="PackedScene" uid="uid://bj6i1l2e2ojsn" path="res://Scenes/Player.tscn" id="1_gvtya"]
 [ext_resource type="Texture2D" uid="uid://d3wt0fipymvwk" path="res://Textures/industrial_sunset_puresky_2k.exr" id="3_6swl5"]
-[ext_resource type="Script" path="res://show_label.gd" id="4_jdenl"]
+[ext_resource type="Script" uid="uid://ca10x58xocxlj" path="res://show_label.gd" id="4_jdenl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ka7dr"]
 size = Vector3(8.99084, 0.515, 24.4216)
@@ -108,16 +108,24 @@ transform = Transform3D(1, 0, 0, 0, 0.998728, -0.0504189, 0, 0.0504189, 0.998728
 pixel_size = 0.05
 text = "PRESS SPACE TO JUMP!"
 script = ExtResource("4_jdenl")
+player_path = NodePath("../Player")
+label_path = NodePath(".")
 
 [node name="RollLabel" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.0847, 65.5597)
 pixel_size = 0.05
 text = "Use the arrows to move!"
+script = ExtResource("4_jdenl")
+player_path = NodePath("../Player")
+label_path = NodePath(".")
 
 [node name="DownLabel" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.998728, -0.0504189, 0, 0.0504189, 0.998728, 0.0557709, 22.9504, -25.9139)
 pixel_size = 0.1
 text = "Down we go!"
+script = ExtResource("4_jdenl")
+player_path = NodePath("../Player")
+label_path = NodePath(".")
 
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -32.5633, -26.1614)
