@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://vqt3o601obr"]
+
+[ext_resource type="Texture2D" uid="uid://xah045shsb7h" path="res://Textures/wood.webp" id="1_if6we"]
+[ext_resource type="Texture2D" uid="uid://dkoikfrwmfckc" path="res://Textures/A.png" id="2_yv5qj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fgk7e"]
+albedo_color = Color(0.705882, 0.458824, 0.32549, 1)
+normal_enabled = true
+normal_texture = ExtResource("1_if6we")
+rim = 0.3
+disable_receive_shadows = true
+
+[sub_resource type="PrismMesh" id="PrismMesh_kj55g"]
+lightmap_size_hint = Vector2i(11, 21)
+material = SubResource("StandardMaterial3D_fgk7e")
+left_to_right = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fr71q"]
+albedo_color = Color(0.705537, 0.459715, 0.32725, 1)
+normal_enabled = true
+normal_texture = ExtResource("1_if6we")
+detail_mask = ExtResource("2_yv5qj")
+disable_receive_shadows = true
+proximity_fade_distance = 0.01
+distance_fade_min_distance = 4096.0
+distance_fade_max_distance = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_0m33q"]
+lightmap_size_hint = Vector2i(11, 21)
+material = SubResource("StandardMaterial3D_fr71q")
+size = Vector3(0.5, 1, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PrismMesh_kj55g")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.98, 0, 0, 0, 0.98, 0, 0, 0, 0.98, 0.75, 0, 0)
+mesh = SubResource("BoxMesh_0m33q")
