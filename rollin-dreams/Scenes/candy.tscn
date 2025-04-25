@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://dtgbfjx0yi0m2"]
+
+[ext_resource type="Texture2D" uid="uid://b0pweuu2cy06i" path="res://Textures/candy.png" id="1_duun8"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0ex5x"]
+load_path = "res://.godot/imported/DALL·E 2025-04-25 11.25.42 - A seamless, tileable 2D texture of a pink and white spiral swirl pattern, resembling a lollipop or candy with soft pastel tones. The design is circula-Photoroom.png-a771b6ca3091b58870e2f2efed5350a7.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bxv4a"]
+albedo_color = Color(1, 0.745098, 1, 1)
+albedo_texture = ExtResource("1_duun8")
+normal_texture = SubResource("CompressedTexture2D_0ex5x")
+rim_enabled = true
+rim = 0.5
+
+[sub_resource type="SphereMesh" id="SphereMesh_yebh8"]
+material = SubResource("StandardMaterial3D_bxv4a")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_211pw"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_b4xhs"]
+material = SubResource("StandardMaterial3D_211pw")
+top_radius = 0.05
+bottom_radius = 0.05
+height = 1.0
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("SphereMesh_yebh8")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+mesh = SubResource("CylinderMesh_b4xhs")

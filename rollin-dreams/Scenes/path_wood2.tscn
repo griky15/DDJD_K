@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dkoikfrwmfckc" path="res://Textures/A.png" id="1_qj52e"]
 [ext_resource type="Texture2D" uid="uid://xah045shsb7h" path="res://Textures/wood.webp" id="2_a2slo"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fr71q"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ylvkj"]
 albedo_color = Color(0.705537, 0.459715, 0.32725, 1)
 normal_enabled = true
 normal_texture = ExtResource("2_a2slo")
@@ -15,7 +15,7 @@ distance_fade_max_distance = 0.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_ounw0"]
 lightmap_size_hint = Vector2i(11, 21)
-material = SubResource("StandardMaterial3D_fr71q")
+material = SubResource("StandardMaterial3D_ylvkj")
 size = Vector3(0.5, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bavsp"]
