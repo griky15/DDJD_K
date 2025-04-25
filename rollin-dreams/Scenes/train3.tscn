@@ -1,0 +1,251 @@
+[gd_scene load_steps=30 format=3 uid="uid://d1s57dm3mdwpd"]
+
+[ext_resource type="PackedScene" uid="uid://02cgbrhhuuol" path="res://Scenes/Star.tscn" id="1_tc4og"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wop5p"]
+albedo_color = Color(0.572549, 0.862745, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_00cgb"]
+material = SubResource("StandardMaterial3D_wop5p")
+size = Vector3(2, 0.42, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_akfso"]
+albedo_color = Color(1, 0.396078, 0.494118, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_1b7od"]
+material = SubResource("StandardMaterial3D_akfso")
+radius = 0.35
+height = 0.35
+is_hemisphere = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sf4lk"]
+albedo_color = Color(1, 0.396078, 0.494118, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_7usqa"]
+material = SubResource("StandardMaterial3D_sf4lk")
+radius = 0.35
+height = 0.35
+is_hemisphere = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ycnrq"]
+albedo_color = Color(1, 0.396078, 0.494118, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ckrqf"]
+material = SubResource("StandardMaterial3D_ycnrq")
+radius = 0.35
+height = 0.35
+is_hemisphere = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0jjw"]
+albedo_color = Color(1, 0.396078, 0.494118, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_px8k6"]
+material = SubResource("StandardMaterial3D_n0jjw")
+radius = 0.35
+height = 0.35
+is_hemisphere = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ocs0c"]
+albedo_color = Color(1, 0.584314, 0.619608, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_tf5e4"]
+material = SubResource("StandardMaterial3D_ocs0c")
+radius = 0.7
+height = 0.5
+is_hemisphere = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3mnyy"]
+albedo_color = Color(1, 0.584314, 0.619608, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_crl57"]
+material = SubResource("StandardMaterial3D_3mnyy")
+radius = 0.7
+height = 0.5
+is_hemisphere = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dsmrh"]
+albedo_color = Color(1, 0.584314, 0.619608, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_qsit7"]
+material = SubResource("StandardMaterial3D_dsmrh")
+radius = 0.7
+height = 0.5
+is_hemisphere = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x626l"]
+albedo_color = Color(1, 0.584314, 0.619608, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_0wv2u"]
+material = SubResource("StandardMaterial3D_x626l")
+radius = 0.7
+height = 0.5
+is_hemisphere = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_44dtw"]
+albedo_color = Color(0.572549, 0.862745, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gto3f"]
+material = SubResource("StandardMaterial3D_44dtw")
+size = Vector3(0.1, 0.7, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_48o58"]
+albedo_color = Color(0.572549, 0.862745, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ujfg6"]
+material = SubResource("StandardMaterial3D_48o58")
+size = Vector3(0.05, 0.7, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e1ejy"]
+albedo_color = Color(0.572549, 0.862745, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cvlfm"]
+material = SubResource("StandardMaterial3D_e1ejy")
+size = Vector3(0.05, 0.7, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dm4ya"]
+albedo_color = Color(0.572549, 0.862745, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rve72"]
+material = SubResource("StandardMaterial3D_dm4ya")
+size = Vector3(0.1, 0.1, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sga5g"]
+albedo_color = Color(0.572549, 0.862745, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3mpql"]
+material = SubResource("StandardMaterial3D_sga5g")
+size = Vector3(2, 0.1, 0.1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.2, 0)
+mesh = SubResource("BoxMesh_00cgb")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.15, 0.1, 0.75)
+mesh = SubResource("SphereMesh_1b7od")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1, 0.1, 0.75)
+mesh = SubResource("SphereMesh_7usqa")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1, 0.1, -0.75)
+mesh = SubResource("SphereMesh_ckrqf")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.15, 0.1, -0.75)
+mesh = SubResource("SphereMesh_px8k6")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0.15, 0.1, 1.03)
+mesh = SubResource("SphereMesh_tf5e4")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, -1, 0.1, 1.03)
+mesh = SubResource("SphereMesh_crl57")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, 0.2, 0, -0.2, -8.74228e-09, -1, 0.1, -1.03)
+mesh = SubResource("SphereMesh_qsit7")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, 0.2, 0, -0.2, -8.74228e-09, 0.15, 0.1, -1.03)
+mesh = SubResource("SphereMesh_0wv2u")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55, 0.75, -0.7)
+mesh = SubResource("BoxMesh_gto3f")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55, 0.75, 0.7)
+mesh = SubResource("BoxMesh_gto3f")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35, 0.75, -0.7)
+mesh = SubResource("BoxMesh_gto3f")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35, 0.75, 0.7)
+mesh = SubResource("BoxMesh_gto3f")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.4, 0.75, 0.65)
+mesh = SubResource("BoxMesh_ujfg6")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.4, 0.75, -0.65)
+mesh = SubResource("BoxMesh_ujfg6")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.533217, 0.75, 0)
+mesh = SubResource("BoxMesh_cvlfm")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33, 0.75, 0)
+mesh = SubResource("BoxMesh_cvlfm")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55, 1.05, 0)
+mesh = SubResource("BoxMesh_rve72")
+
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.352, 1.05, 0)
+mesh = SubResource("BoxMesh_rve72")
+
+[node name="MeshInstance3D20" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.403, 1.05, 0.7)
+mesh = SubResource("BoxMesh_3mpql")
+
+[node name="MeshInstance3D21" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.402, 1.05, -0.703)
+mesh = SubResource("BoxMesh_3mpql")
+
+[node name="star" parent="." instance=ExtResource("1_tc4og")]
+transform = Transform3D(-4.37114e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, -4.37114e-09, 0.55, 0.65, -0.35)
+
+[node name="star2" parent="." instance=ExtResource("1_tc4og")]
+transform = Transform3D(-4.37114e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, -4.37114e-09, 0.55, 0.75, 0)
+
+[node name="star3" parent="." instance=ExtResource("1_tc4og")]
+transform = Transform3D(-4.37114e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, -4.37114e-09, 0.55, 0.65, 0.35)
+
+[node name="star4" parent="." instance=ExtResource("1_tc4og")]
+transform = Transform3D(-4.37114e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, -4.37114e-09, -1.355, 0.65, -0.35)
+
+[node name="star5" parent="." instance=ExtResource("1_tc4og")]
+transform = Transform3D(-4.37114e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, -4.37114e-09, -1.355, 0.75, 0)
+
+[node name="star6" parent="." instance=ExtResource("1_tc4og")]
+transform = Transform3D(-4.37114e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, -4.37114e-09, -1.355, 0.65, 0.35)
+
+[node name="star7" parent="." instance=ExtResource("1_tc4og")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.4, 0.65, -0.677)
+
+[node name="star8" parent="." instance=ExtResource("1_tc4og")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.2, 0.65, -0.677)
+
+[node name="star9" parent="." instance=ExtResource("1_tc4og")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1, 0.65, -0.677)
+
+[node name="star10" parent="." instance=ExtResource("1_tc4og")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.1, 0.75, -0.677)
+
+[node name="star11" parent="." instance=ExtResource("1_tc4og")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.7, 0.75, -0.677)
+
+[node name="star12" parent="." instance=ExtResource("1_tc4og")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.2, 0.65, 0.67)
+
+[node name="star13" parent="." instance=ExtResource("1_tc4og")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.1, 0.75, 0.677)
+
+[node name="star14" parent="." instance=ExtResource("1_tc4og")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.4, 0.65, 0.677)
+
+[node name="star15" parent="." instance=ExtResource("1_tc4og")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.7, 0.75, 0.677)
+
+[node name="star16" parent="." instance=ExtResource("1_tc4og")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1, 0.65, 0.677)

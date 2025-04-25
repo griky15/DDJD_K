@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://df68fcv438nbn"]
+
+[ext_resource type="Texture2D" uid="uid://cfakp73t383mj" path="res://Textures/boia.png" id="1_bcnne"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tqqct"]
+albedo_color = Color(0.952941, 0.52549, 0.831373, 1)
+
+[sub_resource type="TorusMesh" id="TorusMesh_4o3m0"]
+material = SubResource("StandardMaterial3D_tqqct")
+inner_radius = 0.7
+outer_radius = 1.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pwfom"]
+albedo_color = Color(1, 0.6, 0.227451, 1)
+normal_texture = ExtResource("1_bcnne")
+
+[sub_resource type="TorusMesh" id="TorusMesh_14nhl"]
+material = SubResource("StandardMaterial3D_pwfom")
+inner_radius = 0.8
+outer_radius = 1.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwud8"]
+albedo_color = Color(0.952941, 0.780392, 0.811765, 1)
+normal_enabled = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_2mqen"]
+material = SubResource("StandardMaterial3D_iwud8")
+radius = 0.8
+height = 0.001
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, -0.2, 0)
+mesh = SubResource("TorusMesh_4o3m0")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -0.2, 0)
+mesh = SubResource("TorusMesh_14nhl")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0947844, 0)
+mesh = SubResource("SphereMesh_2mqen")
