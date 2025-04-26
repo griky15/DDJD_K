@@ -1,0 +1,88 @@
+[gd_scene load_steps=11 format=3 uid="uid://c0jdlop3mf2r8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jk2s0"]
+albedo_color = Color(1, 0.843137, 0.282353, 1)
+metallic = 0.65
+clearcoat_enabled = true
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_724bg"]
+material = SubResource("StandardMaterial3D_jk2s0")
+height = 10.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_224jf"]
+albedo_color = Color(1, 0.843137, 0.282353, 1)
+metallic = 0.65
+roughness = 0.5
+clearcoat_enabled = true
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_3j03h"]
+material = SubResource("StandardMaterial3D_224jf")
+height = 15.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhry6"]
+albedo_color = Color(1, 0.843137, 0.282353, 1)
+metallic = 0.65
+roughness = 0.5
+clearcoat_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_oaqfv"]
+material = SubResource("StandardMaterial3D_xhry6")
+size = Vector3(1.4, 0.05, 0.9)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_urtbk"]
+albedo_color = Color(1, 0.843137, 0.282353, 1)
+metallic = 0.65
+roughness = 0.5
+clearcoat_enabled = true
+
+[sub_resource type="TorusMesh" id="TorusMesh_6kwgq"]
+material = SubResource("StandardMaterial3D_urtbk")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f3dd6"]
+albedo_color = Color(1, 0.843137, 0.282353, 1)
+metallic = 0.65
+roughness = 0.5
+clearcoat_enabled = true
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_qgb11"]
+material = SubResource("StandardMaterial3D_f3dd6")
+top_radius = 0.02
+bottom_radius = 0.02
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, -0.1, 0, 0.1, -4.37114e-09, 0, 0, 0.000356436)
+mesh = SubResource("CapsuleMesh_724bg")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, -0.1, 0, 0.1, -4.37114e-09, 1.403, 0, 0)
+mesh = SubResource("CapsuleMesh_724bg")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 0, 0, 0, 0.1, 0.701037, 0, -0.456679)
+mesh = SubResource("CapsuleMesh_3j03h")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 0, 0, 0, 0.1, 0.701037, 0, 0.455532)
+mesh = SubResource("CapsuleMesh_3j03h")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0.025, 0)
+mesh = SubResource("BoxMesh_oaqfv")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.31134e-08, 0.1, -4.37114e-09, 3.82137e-16, 4.37114e-09, 0.1, 0.1, -1.31134e-08, 1.91069e-16, 1.38, 0.14, 0)
+mesh = SubResource("TorusMesh_6kwgq")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.31134e-08, 0.1, -4.37114e-09, 3.82137e-16, 4.37114e-09, 0.1, 0.1, -1.31134e-08, 1.91069e-16, 0.02, 0.14, 0)
+mesh = SubResource("TorusMesh_6kwgq")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02, 1.22, 0)
+mesh = SubResource("CylinderMesh_qgb11")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37398, 1.22, 0)
+mesh = SubResource("CylinderMesh_qgb11")
