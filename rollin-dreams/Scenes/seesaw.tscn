@@ -1,0 +1,108 @@
+[gd_scene load_steps=11 format=3 uid="uid://u8bsffvhji35"]
+
+[ext_resource type="Texture2D" uid="uid://xah045shsb7h" path="res://Textures/wood.webp" id="1_samgj"]
+[ext_resource type="PackedScene" uid="uid://02cgbrhhuuol" path="res://Scenes/Star.tscn" id="2_vaoph"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_12bnh"]
+albedo_color = Color(0.705882, 0.458824, 0.32549, 1)
+normal_enabled = true
+normal_texture = ExtResource("1_samgj")
+
+[sub_resource type="BoxMesh" id="BoxMesh_wu3tl"]
+material = SubResource("StandardMaterial3D_12bnh")
+size = Vector3(3, 0.15, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xjs5n"]
+albedo_color = Color(0.705882, 0.458824, 0.32549, 1)
+normal_enabled = true
+normal_texture = ExtResource("1_samgj")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_yiavd"]
+material = SubResource("StandardMaterial3D_xjs5n")
+height = 20.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y6m3u"]
+albedo_color = Color(0.705882, 0.458824, 0.32549, 1)
+normal_enabled = true
+normal_texture = ExtResource("1_samgj")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_wh0ns"]
+material = SubResource("StandardMaterial3D_y6m3u")
+height = 10.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ebonc"]
+albedo_color = Color(0.705882, 0.458824, 0.32549, 1)
+normal_enabled = true
+normal_texture = ExtResource("1_samgj")
+
+[sub_resource type="BoxMesh" id="BoxMesh_amg0c"]
+material = SubResource("StandardMaterial3D_ebonc")
+size = Vector3(0.08, 0.55, 0.9)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_wu3tl")
+
+[node name="star2" parent="." instance=ExtResource("2_vaoph")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0.5, 0.506)
+
+[node name="star3" parent="." instance=ExtResource("2_vaoph")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.5, 0.5, 0.5)
+
+[node name="star4" parent="." instance=ExtResource("2_vaoph")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.5, 0.5, 0.5)
+
+[node name="star5" parent="." instance=ExtResource("2_vaoph")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 1, 0.5, 0.5)
+
+[node name="star6" parent="." instance=ExtResource("2_vaoph")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -1, 0.5, 0.5)
+
+[node name="star7" parent="." instance=ExtResource("2_vaoph")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0.5, -0.5)
+
+[node name="star8" parent="." instance=ExtResource("2_vaoph")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.5, 0.5, -0.5)
+
+[node name="star9" parent="." instance=ExtResource("2_vaoph")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -1, 0.5, -0.5)
+
+[node name="star10" parent="." instance=ExtResource("2_vaoph")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.5, 0.5, -0.5)
+
+[node name="star11" parent="." instance=ExtResource("2_vaoph")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 1, 0.5, -0.5)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.05, 0, 0, 0, -2.18557e-09, 0.05, 0, -0.05, -2.18557e-09, 1.48, 0.561, 0)
+mesh = SubResource("CapsuleMesh_yiavd")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.05, 0, 0, 0, -2.18557e-09, 0.05, 0, -0.05, -2.18557e-09, 1.48, 0.427, 0)
+mesh = SubResource("CapsuleMesh_yiavd")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.05, 0, 0, 0, -2.18557e-09, 0.05, 0, -0.05, -2.18557e-09, -1.48, 0.561, 0)
+mesh = SubResource("CapsuleMesh_yiavd")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.05, 0, 0, 0, -2.18557e-09, 0.05, 0, -0.05, -2.18557e-09, -1.48, 0.427, 0)
+mesh = SubResource("CapsuleMesh_yiavd")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 0.3, 0, 0)
+mesh = SubResource("CapsuleMesh_wh0ns")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, -0.3, 0, 0)
+mesh = SubResource("CapsuleMesh_wh0ns")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0, 1, -0.17, 0.235, 0)
+mesh = SubResource("BoxMesh_amg0c")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.866025, -0.5, 0, 0.5, 0.866025, 0, 0, 0, 1, 0.17, 0.235, 0)
+mesh = SubResource("BoxMesh_amg0c")
