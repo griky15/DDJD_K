@@ -1,0 +1,84 @@
+[gd_scene load_steps=13 format=3 uid="uid://hu1or7ybtq4k"]
+
+[ext_resource type="Texture2D" uid="uid://dlhupapcfqr56" path="res://Textures/water.png" id="1_n4rkq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_giwr6"]
+albedo_color = Color(0.152941, 0.74902, 1, 1)
+rim_enabled = true
+
+[sub_resource type="TorusMesh" id="TorusMesh_6dgu0"]
+material = SubResource("StandardMaterial3D_giwr6")
+inner_radius = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d62i5"]
+albedo_color = Color(0.0627451, 0.258824, 0.886275, 1)
+albedo_texture = ExtResource("1_n4rkq")
+rim_enabled = true
+rim = 0.3
+
+[sub_resource type="SphereMesh" id="SphereMesh_xo5t1"]
+material = SubResource("StandardMaterial3D_d62i5")
+radius = 0.9
+height = 0.001
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hl52s"]
+albedo_color = Color(0.152941, 0.74902, 1, 1)
+rim_enabled = true
+rim_tint = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_jn5y7"]
+material = SubResource("StandardMaterial3D_hl52s")
+radius = 0.7
+height = 0.001
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qg0lm"]
+albedo_color = Color(0.0627451, 0.258824, 0.886275, 1)
+albedo_texture = ExtResource("1_n4rkq")
+rim_enabled = true
+rim = 0.3
+
+[sub_resource type="SphereMesh" id="SphereMesh_lt5c3"]
+material = SubResource("StandardMaterial3D_qg0lm")
+radius = 0.67
+height = 0.001
+is_hemisphere = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_rwwfd"]
+material = SubResource("StandardMaterial3D_hl52s")
+height = 0.001
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q82j6"]
+albedo_color = Color(0.0627451, 0.258824, 0.886275, 1)
+albedo_texture = ExtResource("1_n4rkq")
+rim_enabled = true
+rim = 0.3
+
+[sub_resource type="SphereMesh" id="SphereMesh_67uk4"]
+material = SubResource("StandardMaterial3D_q82j6")
+radius = 0.47
+height = 0.001
+is_hemisphere = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("TorusMesh_6dgu0")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_xo5t1")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.005, 0)
+mesh = SubResource("SphereMesh_jn5y7")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, -0.0310255)
+mesh = SubResource("SphereMesh_lt5c3")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.015, 0)
+mesh = SubResource("SphereMesh_rwwfd")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014, 0.02, 0.0283185)
+mesh = SubResource("SphereMesh_67uk4")

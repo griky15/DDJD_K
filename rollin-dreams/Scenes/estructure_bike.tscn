@@ -1,0 +1,98 @@
+[gd_scene load_steps=7 format=3 uid="uid://c2jat5hcgiwfy"]
+
+[sub_resource type="Curve3D" id="Curve3D_yv7q8"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0.584, 0.405, 0, 0, 0, 0, 0, 0, 0, 0.565, 0.3, 0, 0, 0, 0, 0, 0, 0, 0.528, 0.243, 0, 0, 0, 0, 0, 0, 0, 0.49, 0.205, 0, 0, 0, 0, 0, 0, 0, 0.414, 0.173, 0, 0, 0, 0, 0, 0, 0, 0.292, 0.117, 0, 0, 0, 0, 0, 0, 0, 0.173, 0.018, 0, 0, 0, 0, 0, 0, 0, 0.0939957, -0.113, 0, 0, 0, 0, 0, 0, 0, 0.063, -0.213, 0, 0, 0, 0, 0, 0, 0, 0.029, -0.337, 0, 0, 0, 0, 0, 0, 0, -0.009, -0.47, 0, 0, 0, 0, 0, 0, 0, -0.037, -0.621),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 12
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_if85n"]
+albedo_color = Color(1, 0.941176, 0.498039, 1)
+rim_enabled = true
+rim = 0.2
+
+[sub_resource type="Curve3D" id="Curve3D_nruuw"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.116497, 0.147126, 0.00948969, 0, 0, 0, 0, 0, 0, -0.133243, 0.550166, 0.016995, 0, 0, 0, 0, 0, 0, -0.167122, 0.772632, 0.022956, 0, 0, 0, 0, 0, 0, -0.166743, 0.921653, 0.0197473, 0, 0, 0, 0, 0, 0, -0.0838003, 1.0061, -0.00929725, 0, 0, 0, 0, 0, 0, 0.148139, 1.0141, -0.0134579, 0, 0, 0, 0, 0, 0, 0.237297, 0.875729, -0.0198195, 0, 0, 0, 0, 0, 0, 0.216537, 0.554132, -0.0187489, 0, 0, 0, 0, 0, 0, 0.173264, 0.156846, -0.0224988),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8vmj5"]
+albedo_color = Color(1, 0.941176, 0.498039, 1)
+rim_enabled = true
+rim = 0.2
+
+[sub_resource type="Curve3D" id="Curve3D_33j28"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.417472, 1.20908, 1.45205, 0, 0, 0, 0, 0, 0, 0.358821, 1.14733, 1.39423, 0, 0, 0, 0, 0, 0, 0.313673, 1.10046, 1.3231, 0, 0, 0, 0, 0, 0, 0.252922, 1.04296, 1.25108, 0, 0, 0, 0, 0, 0, 0.185535, 0.97351, 1.17422, 0, 0, 0, 0, 0, 0, 0.136482, 0.937161, 1.15363, 0, 0, 0, 0, 0, 0, 0.0165527, 0.907952, 1.10738, 0, 0, 0, 0, 0, 0, -0.101423, 0.928657, 1.13762, 0, 0, 0, 0, 0, 0, -0.220213, 0.966437, 1.19157, 0, 0, 0, 0, 0, 0, -0.268713, 0.990788, 1.22301, 0, 0, 0, 0, 0, 0, -0.316233, 1.03949, 1.28425, 0, 0, 0, 0, 0, 0, -0.347399, 1.08472, 1.3407, 0, 0, 0, 0, 0, 0, -0.3945, 1.14386, 1.41472, 0, 0, 0, 0, 0, 0, -0.420794, 1.19638, 1.47084, 0, 0, 0, 0, 0, 0, -0.424575, 1.21569, 1.47217),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 15
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cjsul"]
+albedo_color = Color(1, 0.941176, 0.498039, 1)
+rim_enabled = true
+rim = 0.2
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.858338, -0.80706)
+curve = SubResource("Curve3D_yv7q8")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Path3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0502134, -0.99547, 0.878856)
+polygon = PackedVector2Array(0, 0, 0, 0.1, 0.1, 0.1, 0.1, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 0.01
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+smooth_faces = true
+material = SubResource("StandardMaterial3D_if85n")
+
+[node name="Path3D2" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000268862, -0.0858476, 0)
+curve = SubResource("Curve3D_nruuw")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Path3D2"]
+transform = Transform3D(1, 0, 0, 0, 0.987494, 0.157658, 0, -0.157658, 0.987494, -0.0193717, 0.151021, 0.0477369)
+polygon = PackedVector2Array(0, 0, 0, 0.1, 0.1, 0.1, 0.1, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 0.01
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+smooth_faces = true
+material = SubResource("StandardMaterial3D_8vmj5")
+
+[node name="Path3D3" type="Path3D" parent="."]
+curve = SubResource("Curve3D_33j28")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Path3D3"]
+transform = Transform3D(1, 0, 0, 0, 0.987494, 0.157658, 0, -0.157658, 0.987494, -0.0193717, 0.650658, -1.38442)
+polygon = PackedVector2Array(0, 0, 0, 0.1, 0.1, 0.1, 0.1, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 0.01
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+smooth_faces = true
+material = SubResource("StandardMaterial3D_cjsul")

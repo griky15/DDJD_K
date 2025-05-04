@@ -42,53 +42,53 @@ size = Vector3(0.08, 0.55, 0.9)
 [node name="Node3D" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(0.974901, 0.222638, 0, -0.222638, 0.974901, 0, 0, 0, 1, 0.00035622, 0.49996, 0)
 mesh = SubResource("BoxMesh_wu3tl")
 
 [node name="star2" parent="." instance=ExtResource("2_vaoph")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0.5, 0.506)
+transform = Transform3D(0.0487451, 0.0111319, 0, -0.0111319, 0.0487451, 0, 0, 0, 0.05, 0.00035622, 0.49996, 0.506)
 
 [node name="star3" parent="." instance=ExtResource("2_vaoph")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.5, 0.5, 0.5)
+transform = Transform3D(0.0487451, 0.0111319, 0, -0.0111319, 0.0487451, 0, 0, 0, 0.05, 0.487807, 0.388641, 0.5)
 
 [node name="star4" parent="." instance=ExtResource("2_vaoph")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.5, 0.5, 0.5)
+transform = Transform3D(0.0487451, 0.0111319, 0, -0.0111319, 0.0487451, 0, 0, 0, 0.05, -0.487094, 0.611279, 0.5)
 
 [node name="star5" parent="." instance=ExtResource("2_vaoph")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 1, 0.5, 0.5)
+transform = Transform3D(0.0487451, 0.0111319, 0, -0.0111319, 0.0487451, 0, 0, 0, 0.05, 0.975257, 0.277322, 0.5)
 
 [node name="star6" parent="." instance=ExtResource("2_vaoph")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -1, 0.5, 0.5)
+transform = Transform3D(0.0487451, 0.0111319, 0, -0.0111319, 0.0487451, 0, 0, 0, 0.05, -0.974545, 0.722597, 0.5)
 
 [node name="star7" parent="." instance=ExtResource("2_vaoph")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0.5, -0.5)
+transform = Transform3D(0.0487451, 0.0111319, 0, -0.0111319, 0.0487451, 0, 0, 0, 0.05, 0.00035622, 0.49996, -0.5)
 
 [node name="star8" parent="." instance=ExtResource("2_vaoph")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.5, 0.5, -0.5)
+transform = Transform3D(0.0487451, 0.0111319, 0, -0.0111319, 0.0487451, 0, 0, 0, 0.05, -0.487094, 0.611279, -0.5)
 
 [node name="star9" parent="." instance=ExtResource("2_vaoph")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -1, 0.5, -0.5)
+transform = Transform3D(0.0487451, 0.0111319, 0, -0.0111319, 0.0487451, 0, 0, 0, 0.05, -0.974545, 0.722597, -0.5)
 
 [node name="star10" parent="." instance=ExtResource("2_vaoph")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.5, 0.5, -0.5)
+transform = Transform3D(0.0487451, 0.0111319, 0, -0.0111319, 0.0487451, 0, 0, 0, 0.05, 0.487807, 0.388641, -0.5)
 
 [node name="star11" parent="." instance=ExtResource("2_vaoph")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 1, 0.5, -0.5)
+transform = Transform3D(0.0487451, 0.0111319, 0, -0.0111319, 0.0487451, 0, 0, 0, 0.05, 0.975257, 0.277322, -0.5)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.05, 0, 0, 0, -2.18557e-09, 0.05, 0, -0.05, -2.18557e-09, 1.48, 0.561, 0)
+transform = Transform3D(0.0487451, -4.8659e-10, 0.0111319, -0.0111319, -2.13072e-09, 0.0487451, 0, -0.05, -2.18557e-09, 1.45679, 0.229925, 0)
 mesh = SubResource("CapsuleMesh_yiavd")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.05, 0, 0, 0, -2.18557e-09, 0.05, 0, -0.05, -2.18557e-09, 1.48, 0.427, 0)
+transform = Transform3D(0.0487451, -4.8659e-10, 0.0111319, -0.0111319, -2.13072e-09, 0.0487451, 0, -0.05, -2.18557e-09, 1.42696, 0.0992884, 0)
 mesh = SubResource("CapsuleMesh_yiavd")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.05, 0, 0, 0, -2.18557e-09, 0.05, 0, -0.05, -2.18557e-09, -1.48, 0.561, 0)
+transform = Transform3D(0.0487451, -4.8659e-10, 0.0111319, -0.0111319, -2.13072e-09, 0.0487451, 0, -0.05, -2.18557e-09, -1.42892, 0.888932, 0)
 mesh = SubResource("CapsuleMesh_yiavd")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.05, 0, 0, 0, -2.18557e-09, 0.05, 0, -0.05, -2.18557e-09, -1.48, 0.427, 0)
+transform = Transform3D(0.0487451, -4.8659e-10, 0.0111319, -0.0111319, -2.13072e-09, 0.0487451, 0, -0.05, -2.18557e-09, -1.45875, 0.758296, 0)
 mesh = SubResource("CapsuleMesh_yiavd")
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="."]

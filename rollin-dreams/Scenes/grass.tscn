@@ -1,14 +1,15 @@
 [gd_scene load_steps=7 format=3 uid="uid://c4q15vdnufmik"]
 
-[ext_resource type="Texture2D" uid="uid://bnqyt53raevlo" path="res://Textures/grass3.png" id="1_j5eao"]
+[ext_resource type="Texture2D" uid="uid://b5rog21e44svd" path="res://Textures/grass2.png" id="1_fp7yg"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xts5b"]
-load_path = "res://.godot/imported/grass.jpeg-4ff3390b826b9fae5b2985e253a62314.s3tc.ctex"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tv57r"]
-albedo_color = Color(0.799668, 0.455934, 0.156269, 1)
+albedo_color = Color(0.773373, 0.438203, 0.14365, 1)
 normal_enabled = true
 normal_texture = SubResource("CompressedTexture2D_xts5b")
+rim_enabled = true
+rim = 0.1
 
 [sub_resource type="BoxMesh" id="BoxMesh_s7s8r"]
 material = SubResource("StandardMaterial3D_tv57r")
@@ -16,7 +17,7 @@ size = Vector3(1, 0.8, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vbvih"]
 albedo_color = Color(0.363637, 0.674828, 9.62615e-07, 1)
-albedo_texture = ExtResource("1_j5eao")
+albedo_texture = ExtResource("1_fp7yg")
 normal_enabled = true
 normal_scale = 1.5
 rim_enabled = true
