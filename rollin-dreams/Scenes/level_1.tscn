@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/camera_3d.gd" id="1_cqm10"]
 [ext_resource type="PackedScene" uid="uid://bj6i1l2e2ojsn" path="res://Scenes/Player.tscn" id="1_gvtya"]
 [ext_resource type="Texture2D" uid="uid://d3wt0fipymvwk" path="res://Textures/industrial_sunset_puresky_2k.exr" id="3_6swl5"]
-[ext_resource type="Script" path="res://show_label.gd" id="4_jdenl"]
+[ext_resource type="Script" path="res://Scripts/show_label.gd" id="4_jdenl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ka7dr"]
 size = Vector3(8.99084, 0.515, 24.4216)
