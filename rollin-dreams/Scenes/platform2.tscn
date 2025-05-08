@@ -416,7 +416,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3149, 0, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4152, 1.35, 2.443)
 
 [node name="Node3D8" parent="." instance=ExtResource("12_dkgid")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.70381, 0.585367, 1.26732)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.71587, 0.585367, 1.26732)
 
 [node name="Node3D9" parent="." instance=ExtResource("13_r3cdt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.105, 1, 1.05971)
