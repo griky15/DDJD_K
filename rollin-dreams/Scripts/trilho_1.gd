@@ -29,6 +29,12 @@ func _update_multimesh():
 		var position = curve.sample_baked(curve_distance, true)
 		
 		var basis = Basis()
+		var up = curve.sample_baked_up_vector(curve_distance, true)
+		var forward = position.direction_to(curve.sample_baked(curve_distance + 0.1, true))
+
+		basis.y = up
+		basis.x = forward
+		basis.z = forward.cross(up).normalized()
 		var transform = Transform3D(basis, position)
 		mm.set_instance_transform(i, transform)
 		
