@@ -114,7 +114,7 @@ curve = SubResource("Curve3D_qj3xv")
 script = ExtResource("1_qqec5")
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="trilho3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.4848, 0.958694, 7.03625)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.4428, 0.958694, 7.02183)
 polygon = PackedVector2Array(-0.5, 0, -0.5, 0.1, -0.4, 0.1, -0.4, 0)
 mode = 2
 path_node = NodePath("..")
@@ -130,7 +130,7 @@ smooth_faces = true
 material = SubResource("StandardMaterial3D_j4g56")
 
 [node name="CSGPolygon3D3" type="CSGPolygon3D" parent="trilho3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.4309, 0.958694, 7.27186)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.4839, 0.958694, 7.20639)
 polygon = PackedVector2Array(0.9, 0, 0.9, 0.1, 1, 0.1, 1, 0)
 mode = 2
 path_node = NodePath("..")
@@ -155,7 +155,7 @@ curve = SubResource("Curve3D_aiamu")
 script = ExtResource("1_qqec5")
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="trilho2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.98, 46.2908, 1.30423, 12.676)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.98, 46.2588, 1, 12.7717)
 polygon = PackedVector2Array(-0.5, 0, -0.5, 0.1, -0.4, 0.1, -0.4, 0)
 mode = 2
 path_node = NodePath("..")
@@ -171,7 +171,7 @@ smooth_faces = true
 material = SubResource("StandardMaterial3D_jf8tt")
 
 [node name="CSGPolygon3D2" type="CSGPolygon3D" parent="trilho2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.3987, 1.25972, 13.0033)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.3448, 1, 13.1627)
 polygon = PackedVector2Array(0.9, 0, 0.9, 0.1, 1, 0.1, 1, 0)
 mode = 2
 path_node = NodePath("..")
