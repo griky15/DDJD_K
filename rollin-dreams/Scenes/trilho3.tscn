@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cabfxdy43tm62"]
 
-[ext_resource type="Script" path="res://Scripts/trilho_1.gd" id="1_xfcry"]
+[ext_resource type="Script" uid="uid://ddj4pvelf6r20" path="res://Scripts/trilho_1.gd" id="1_xfcry"]
 [ext_resource type="Texture2D" uid="uid://xah045shsb7h" path="res://Textures/wood.webp" id="2_y5h81"]
 
 [sub_resource type="Curve3D" id="Curve3D_8p75y"]

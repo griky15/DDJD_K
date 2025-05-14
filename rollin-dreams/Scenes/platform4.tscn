@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://dw2yptxahu735"]
 
-[ext_resource type="Script" path="res://Scripts/trilho_1.gd" id="1_qqec5"]
+[ext_resource type="Script" uid="uid://ddj4pvelf6r20" path="res://Scripts/trilho_1.gd" id="1_qqec5"]
 [ext_resource type="Texture2D" uid="uid://xah045shsb7h" path="res://Textures/wood.webp" id="2_jsivw"]
 [ext_resource type="PackedScene" uid="uid://bjpgsqwyruv52" path="res://Scenes/trilho1.tscn" id="3_akgtl"]
 [ext_resource type="PackedScene" uid="uid://dqei8ock2xrc" path="res://Scenes/coluna2.tscn" id="6_bgq40"]
