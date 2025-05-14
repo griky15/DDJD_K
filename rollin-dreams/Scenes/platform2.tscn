@@ -1,11 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://dlrkismblbyff"]
+[gd_scene load_steps=16 format=3 uid="uid://dlrkismblbyff"]
 
 [ext_resource type="PackedScene" uid="uid://c4q15vdnufmik" path="res://Scenes/grass.tscn" id="1_d06sr"]
 [ext_resource type="PackedScene" uid="uid://dy8nroanf8gnn" path="res://Scenes/mushroom2.tscn" id="2_145ep"]
 [ext_resource type="PackedScene" uid="uid://v1ygupa3qmmm" path="res://Scenes/trampoline.tscn" id="3_jdr5q"]
+[ext_resource type="PackedScene" uid="uid://bj6i1l2e2ojsn" path="res://Scenes/Player.tscn" id="4_c7mol"]
 [ext_resource type="PackedScene" uid="uid://u8bsffvhji35" path="res://Scenes/seesaw.tscn" id="4_lxpw8"]
 [ext_resource type="PackedScene" uid="uid://chgsay7pg68e4" path="res://Scenes/Bear.tscn" id="5_8bkno"]
-[ext_resource type="PackedScene" path="res://Scenes/trampoline3.tscn" id="6_nh3gp"]
+[ext_resource type="Script" uid="uid://beyp1q8fwfflu" path="res://Scripts/camera_3d.gd" id="5_jpmm1"]
+[ext_resource type="PackedScene" uid="uid://odathwxux3hw" path="res://Scenes/trampoline3.tscn" id="6_nh3gp"]
 [ext_resource type="PackedScene" uid="uid://8b821y8kb3sx" path="res://Scenes/mushroom.tscn" id="7_gj6ef"]
 [ext_resource type="PackedScene" uid="uid://qtlhxf0t3b3i" path="res://Scenes/block_2.tscn" id="8_1x1yf"]
 [ext_resource type="PackedScene" uid="uid://b17cx1un7ugcf" path="res://Scenes/Block.tscn" id="9_rdgh1"]
@@ -63,6 +65,15 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.889, 0.8, -0.34)
 
 [node name="Node3D" parent="." instance=ExtResource("3_jdr5q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53138, 1, 1.11123)
+
+[node name="Player" parent="Node3D" instance=ExtResource("4_c7mol")]
+transform = Transform3D(0.991086, 0, -0.133225, 0, 1, 0, 0.133225, 0, 0.991086, 0.0955892, 1.26525, -0.331318)
+
+[node name="PlayerCam" type="Camera3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 108.972)
+current = true
+script = ExtResource("5_jpmm1")
+target = NodePath("../Player")
 
 [node name="grass10" parent="." instance=ExtResource("1_d06sr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -0.347)
