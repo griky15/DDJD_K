@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b17cx1un7ugcf"]
+[gd_scene load_steps=20 format=3 uid="uid://b17cx1un7ugcf"]
 
 [ext_resource type="Texture2D" uid="uid://dkoikfrwmfckc" path="res://Textures/A.png" id="1_44e62"]
 
@@ -8,12 +8,18 @@ albedo_texture = ExtResource("1_44e62")
 [sub_resource type="QuadMesh" id="QuadMesh_lob56"]
 material = SubResource("StandardMaterial3D_uakbd")
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ovn4m"]
+data = PackedVector3Array(0.5, -0.5, 0, -0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, 0.5, 0)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d0h05"]
 albedo_texture = ExtResource("1_44e62")
 
 [sub_resource type="QuadMesh" id="QuadMesh_b0o4s"]
 material = SubResource("StandardMaterial3D_d0h05")
 orientation = 1
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_x55lh"]
+data = PackedVector3Array(0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, -0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1dc8d"]
 albedo_texture = ExtResource("1_44e62")
@@ -22,6 +28,9 @@ albedo_texture = ExtResource("1_44e62")
 material = SubResource("StandardMaterial3D_1dc8d")
 orientation = 0
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ujcp4"]
+data = PackedVector3Array(0, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, 0.5, 0, 0.5, -0.5)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4yfpc"]
 albedo_texture = ExtResource("1_44e62")
 
@@ -29,11 +38,17 @@ albedo_texture = ExtResource("1_44e62")
 material = SubResource("StandardMaterial3D_4yfpc")
 orientation = 1
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rjsgv"]
+data = PackedVector3Array(0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, -0.5)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2xmwv"]
 albedo_texture = ExtResource("1_44e62")
 
 [sub_resource type="QuadMesh" id="QuadMesh_dp2on"]
 material = SubResource("StandardMaterial3D_2xmwv")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kcwjl"]
+data = PackedVector3Array(0.5, -0.5, 0, -0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, 0.5, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pqewh"]
 shading_mode = 0
@@ -42,28 +57,63 @@ albedo_texture = ExtResource("1_44e62")
 [sub_resource type="QuadMesh" id="QuadMesh_dfl4c"]
 material = SubResource("StandardMaterial3D_pqewh")
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6wmqn"]
+data = PackedVector3Array(0.5, -0.5, 0, -0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, 0.5, 0)
+
 [node name="Block" type="Node3D"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -0.5)
 mesh = SubResource("QuadMesh_lob56")
+skeleton = NodePath("../..")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -0.5)
+shape = SubResource("ConcavePolygonShape3D_ovn4m")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("QuadMesh_b0o4s")
+skeleton = NodePath("../..")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("ConcavePolygonShape3D_x55lh")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
 mesh = SubResource("QuadMesh_ln4jb")
+skeleton = NodePath("../..")
 
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_ujcp4")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 mesh = SubResource("QuadMesh_df03j")
+skeleton = NodePath("../..")
 
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("ConcavePolygonShape3D_rjsgv")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.5, 0, 0)
 mesh = SubResource("QuadMesh_dp2on")
+skeleton = NodePath("../..")
 
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.5, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_kcwjl")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
 mesh = SubResource("QuadMesh_dfl4c")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
+shape = SubResource("ConcavePolygonShape3D_6wmqn")
