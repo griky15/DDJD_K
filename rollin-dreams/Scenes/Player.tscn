@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bj6i1l2e2ojsn"]
 
 [ext_resource type="Texture2D" uid="uid://bv3obasc3bv5p" path="res://Textures/red.jpg" id="1_bwmrb"]
-[ext_resource type="Script" path="res://Scripts/player.gd" id="1_yu11i"]
+[ext_resource type="Script" uid="uid://ckse76vlahrmb" path="res://Scripts/player.gd" id="1_yu11i"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_kjg36"]
 
