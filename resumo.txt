@@ -1,0 +1,148 @@
+MAPA MENTAL – DESENHO E DESENVOLVIMENTO DE JOGOS DIGITAIS (DDJD)
+
+1. GAME DESIGN
+   │
+   ├── Definição: Arte de criar experiências de jogo
+   ├── Objetivo: Diversão e envolvimento do jogador
+   └── Elementos essenciais (Tétrade Elemental):
+        ├── Mecânicas (regras, interações)
+        ├── Narrativa (enredo, personagens)
+        ├── Estética (visual, áudio, interface)
+        └── Tecnologia (plataforma, motor gráfico)
+
+2. CONCEPTUALIZAÇÃO (IDEAÇÃO DO JOGO)
+   │
+   ├── Geração de ideias
+   │     ├── Brainstorming livre ("blue sky")
+   │     └── Restrições externas (briefings)
+   ├── Escolha do gênero e público-alvo
+   ├── Documentos iniciais:
+   │     ├── Documento de Conceito
+   │     │     ├── Premissa (High concept)
+   │     │     ├── Motivação do jogador
+   │     │     ├── Unique Selling Proposition (USP)
+   │     │     ├── Plataforma e classificação etária
+   │     │     └── Análise competitiva
+   │     └── Proposta de Jogo (Game Proposal)
+   │           ├── Gameplay e mecânicas detalhadas
+   │           ├── Tecnologia, arte e áudio
+   │           ├── Cronograma, orçamento e riscos
+   │           ├── Backstory e personagens principais
+   │           └── "Hook" (aspecto único do jogo)
+   └── Iteração e prototipagem (testes iniciais)
+
+3. STORYTELLING E NARRATIVA EM JOGOS
+   │
+   ├── Elementos básicos da narrativa:
+   │     ├── Tema central
+   │     ├── Backstory (contexto anterior)
+   │     ├── Sinopse e estrutura do enredo
+   │     └── Cenário (onde/quando acontece)
+   ├── Estrutura narrativa:
+   │     ├── Três atos (introdução, meio, fim)
+   │     ├── Conflitos e objetivos claros
+   │     └── Suspensão da descrença (coerência interna)
+   ├── Dispositivos narrativos específicos dos jogos:
+   │     ├── Interatividade e não-linearidade
+   │     ├── Controle do jogador
+   │     ├── Colaboração (multiplayer)
+   │     └── Imersão e experiência emocional
+   └── Referências úteis:
+         ├── Jornada do Herói (Joseph Campbell)
+         └── Curva de interesse (altos e baixos emocionais)
+
+4. MECÂNICAS E TIPOS DE DESAFIOS
+   │
+   ├── Definição de mecânicas (regras/interações)
+   ├── Categorias essenciais (Jesse Schell):
+   │     ├── Espaço (2D/3D, contínuo/discreto)
+   │     ├── Objetos, atributos e estados
+   │     ├── Ações disponíveis (pular, atirar, interagir)
+   │     ├── Regras (vitória/derrota, limites)
+   │     ├── Habilidades (físicas, mentais)
+   │     └── Sorte (eventos aleatórios)
+   └── Tipos de desafios:
+         ├── Combate e conflito direto
+         ├── Corrida e perseguição
+         ├── Resolução de puzzles e enigmas
+         ├── Exploração e descoberta
+         ├── Gerenciamento de recursos/estratégia
+         ├── Tempo e reação rápida
+         └── Cooperação e competição
+
+5. LEVEL DESIGN (DESENHO DE NÍVEIS)
+   │
+   ├── Definição: criação de ambientes e fases do jogo
+   ├── Aspectos fundamentais:
+   │     ├── Objetivos claros por nível
+   │     ├── Duração adequada (curta/média)
+   │     ├── Fluxo (guiar o jogador naturalmente)
+   │     └── Progressão de dificuldade
+   ├── Elementos estruturais dos níveis:
+   │     ├── Layout e uso do espaço
+   │     ├── Relação entre níveis (história)
+   │     └── Recursos e itens disponíveis
+   └── Controle do tempo:
+         ├── Ajustável (simulação)
+         ├── Limitado (desafio extra)
+         ├── Alterado (câmera lenta, tempo acelerado)
+
+6. DOCUMENTAÇÃO E PLANEJAMENTO DE PROJETO
+   │
+   ├── Importância da documentação:
+   │     ├── Comunicação interna (equipe)
+   │     └── Captação de investimento (externa)
+   ├── Documentos principais:
+   │     ├── Documento de Conceito (visão geral inicial)
+   │     ├── Proposta de Jogo (detalhes técnicos/financeiros)
+   │     └── Game Design Document (GDD – guia completo)
+   │           ├── Story Bible, Character Bible
+   │           ├── Level Design detalhado
+   │           ├── Guia técnico (motor gráfico)
+   │           ├── Arte e estilo visual
+   │           └── Plano de testes
+   ├── Planejamento:
+   │     ├── Cronograma e marcos importantes
+   │     └── Recursos e orçamento
+   └── Proteção intelectual (confidencialidade, NDAs)
+
+7. GAME ENGINES (MOTORES DE JOGO)
+   │
+   ├── Definição e uso (tecnologia básica de jogos)
+   ├── Estrutura de um engine:
+   │     ├── Runtime (execução final do jogo)
+   │     │     ├── Renderização gráfica e física
+   │     │     ├── Sistemas de áudio e IA
+   │     │     └── Multiplayer e recursos técnicos
+   │     └── Toolset (ferramentas para criação de conteúdo)
+   │           ├── Editores gráficos (nível, animação)
+   │           ├── Importação e conversão de assets
+   │           └── Ferramentas de scripting visual
+   └── Principais motores:
+         ├── Unreal Engine (AAA, C++, Blueprints)
+         ├── Unity (Indie, mobile, C#)
+         └── Godot (open source, fácil aprendizado)
+
+8. PIPELINE DE DESENVOLVIMENTO 3D
+   │
+   ├── Arte conceitual (Concept Art)
+   ├── Modelagem 3D (escultura digital, captura realidade)
+   ├── Texturização (mapas UV, materiais procedurais)
+   ├── Rigging (ossos, blendshapes faciais, automação)
+   ├── Animação (keyframes, mocap, procedural)
+   ├── Shaders e iluminação (renderização avançada)
+   └── Exportação e integração com o motor gráfico:
+         ├── Formatos (FBX, OBJ, ABC, USD)
+         └── Ajustes finais (colisões, materiais no engine)
+
+9. RECURSOS ADICIONAIS (para aprofundamento)
+   │
+   ├── Canais YouTube recomendados
+   │     ├── Sebastian Lague, GMTK, Mix and Jam
+   ├── Livros recomendados
+   │     ├── Game Programming Patterns
+   │     └── Level Up!
+   └── Plataformas e comunidades úteis
+         ├── Itch.io (game jams)
+         └── GameDevMap (empregos na área)
+
