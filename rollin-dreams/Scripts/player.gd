@@ -26,3 +26,9 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+func jumpTrampoline():
+	# This function is called when the trampoline bounces the player.
+	# Make the player jump with double the normal jump velocity.
+	velocity.y = 2 * JUMP_VELOCITY
+	print("Trampoline bounce!")
