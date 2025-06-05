@@ -551,6 +551,9 @@ target = NodePath("../Player")
 [node name="Player" parent="." instance=ExtResource("4_c7mol")]
 transform = Transform3D(0.991086, 0, -0.133225, 0, 1, 0, 0.133225, 0, 0.991086, -10.1382, 1.59099, 1.07027)
 
+[node name="FmodEventEmitter2D" type="FmodEventEmitter2D" parent="Player"]
+event_guid = "{d58e80cc-139d-450b-ae43-edcf36368087}"
+
 [node name="Node3D12" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_jdr5q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1755, 1.25144, 1.18094)
 script = ExtResource("17_ka580")

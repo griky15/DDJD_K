@@ -1,8 +1,8 @@
 extends CharacterBody3D
 
 
-const SPEED = 15
-const JUMP_VELOCITY = 7
+const SPEED = 5
+const JUMP_VELOCITY = 5
 
 
 func _physics_process(delta: float) -> void:
@@ -30,5 +30,5 @@ func _physics_process(delta: float) -> void:
 func jumpTrampoline():
 	# This function is called when the trampoline bounces the player.
 	# Make the player jump with double the normal jump velocity.
-	velocity.y = 2 * JUMP_VELOCITY
+	velocity.y = 1.5 * JUMP_VELOCITY
 	print("Trampoline bounce!")
