@@ -247,7 +247,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.43632, 6.00622, 40.8562)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6842, 8.68178, 109.092)
 current = true
 script = ExtResource("14_d50dh")
-target = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("15_e8tv8")]
 transform = Transform3D(0.991086, 0, -0.133225, 0, 1, 0, 0.133225, 0, 0.991086, -10.1382, 1.59099, 1.07027)

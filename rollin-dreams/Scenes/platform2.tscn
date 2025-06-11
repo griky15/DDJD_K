@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dlrkismblbyff"]
+[gd_scene load_steps=21 format=3 uid="uid://dlrkismblbyff"]
 
 [ext_resource type="PackedScene" uid="uid://c4q15vdnufmik" path="res://Scenes/grass.tscn" id="1_d06sr"]
 [ext_resource type="PackedScene" uid="uid://dy8nroanf8gnn" path="res://Scenes/mushroom2.tscn" id="2_145ep"]
@@ -19,6 +19,7 @@
 [ext_resource type="Script" uid="uid://vnvwppetn0f1" path="res://Scripts/portal.gd" id="14_xd0ow"]
 [ext_resource type="PackedScene" uid="uid://kitugyn5ghbg" path="res://Scenes/platform1.tscn" id="15_q8woj"]
 [ext_resource type="Script" uid="uid://cq6jr2w0q1wiv" path="res://Scripts/trampoline.gd" id="17_ka580"]
+[ext_resource type="PackedScene" uid="uid://c0jdlop3mf2r8" path="res://Scenes/swing.tscn" id="18_q8woj"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -488,7 +489,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.27123, 1, 17.4694)
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9.04821, 5.05527, 25.7618)
 
 [node name="Node3D11" parent="." node_paths=PackedStringArray("player") instance=ExtResource("13_jpmm1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.14043, 0.598941, 0.965805)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.14043, 0.598941, -2.29915)
 script = ExtResource("14_xd0ow")
 target_scene = ExtResource("15_q8woj")
 player = NodePath("../Player")
@@ -552,6 +553,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6842, 8.68178, 109.092)
 current = true
 script = ExtResource("5_jpmm1")
 target = NodePath("../Player")
+
+[node name="Node3D" parent="." instance=ExtResource("18_q8woj")]
+transform = Transform3D(0.991086, 0, -0.133225, 0, 1, 0, 0.133225, 0, 0.991086, -5.86326, 1.11062, -0.79953)
 
 [node name="Player" parent="." instance=ExtResource("4_c7mol")]
 transform = Transform3D(0.991086, 0, -0.133225, 0, 1, 0, 0.133225, 0, 0.991086, -10.1382, 1.59099, 1.07027)

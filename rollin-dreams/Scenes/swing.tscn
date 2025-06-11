@@ -1,4 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://c0jdlop3mf2r8"]
+[gd_scene load_steps=12 format=3 uid="uid://c0jdlop3mf2r8"]
+
+[ext_resource type="Script" uid="uid://kw0m3ji32x37" path="res://Scenes/swing.gd" id="1_ow3jl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jk2s0"]
 albedo_color = Color(1, 0.843137, 0.282353, 1)
@@ -50,39 +52,40 @@ top_radius = 0.02
 bottom_radius = 0.02
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_ow3jl")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="ChairLateral1" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, -0.1, 0, 0.1, -4.37114e-09, 0, 0, 0.000356436)
 mesh = SubResource("CapsuleMesh_724bg")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+[node name="ChairLateral2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, -0.1, 0, 0.1, -4.37114e-09, 1.403, 0, 0)
 mesh = SubResource("CapsuleMesh_724bg")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+[node name="ChairLateral3" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 0, 0, 0, 0.1, 0.701037, 0, -0.456679)
 mesh = SubResource("CapsuleMesh_3j03h")
 
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+[node name="ChairLatera4" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 0, 0, 0, 0.1, 0.701037, 0, 0.455532)
 mesh = SubResource("CapsuleMesh_3j03h")
 
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+[node name="ChairBase" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0.025, 0)
 mesh = SubResource("BoxMesh_oaqfv")
 
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+[node name="ChairHole1" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.31134e-08, 0.1, -4.37114e-09, 3.82137e-16, 4.37114e-09, 0.1, 0.1, -1.31134e-08, 1.91069e-16, 1.38, 0.14, 0)
 mesh = SubResource("TorusMesh_6kwgq")
 
-[node name="MeshInstance3D7" type="MeshInstance3D" parent="."]
+[node name="ChairHole2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.31134e-08, 0.1, -4.37114e-09, 3.82137e-16, 4.37114e-09, 0.1, 0.1, -1.31134e-08, 1.91069e-16, 0.02, 0.14, 0)
 mesh = SubResource("TorusMesh_6kwgq")
 
-[node name="MeshInstance3D8" type="MeshInstance3D" parent="."]
+[node name="String1" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02, 1.22, 0)
 mesh = SubResource("CylinderMesh_qgb11")
 
-[node name="MeshInstance3D9" type="MeshInstance3D" parent="."]
+[node name="String2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37398, 1.22, 0)
 mesh = SubResource("CylinderMesh_qgb11")
