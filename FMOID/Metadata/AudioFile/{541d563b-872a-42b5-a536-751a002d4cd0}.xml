@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{541d563b-872a-42b5-a536-751a002d4cd0}">
+		<property name="assetPath">
+			<value>Menu/Level 1 Background Music/In game music 1 (1).wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>107.58620833333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5f8a268a-12ed-4bdb-828c-621af9be7ecd}</destination>
+		</relationship>
+	</object>
+</objects>

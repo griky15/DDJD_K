@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{0aa760bc-5be3-4b8f-9f47-644e02b35a5e}">
+		<property name="assetPath">
+			<value>Marble Rolling in Grass.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>25.780104166666668</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5f8a268a-12ed-4bdb-828c-621af9be7ecd}</destination>
+		</relationship>
+	</object>
+</objects>

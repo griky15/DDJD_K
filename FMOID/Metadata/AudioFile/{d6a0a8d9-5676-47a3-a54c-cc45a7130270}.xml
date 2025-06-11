@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{d6a0a8d9-5676-47a3-a54c-cc45a7130270}">
+		<property name="assetPath">
+			<value>Marble collision 2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.32213541666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5f8a268a-12ed-4bdb-828c-621af9be7ecd}</destination>
+		</relationship>
+	</object>
+</objects>

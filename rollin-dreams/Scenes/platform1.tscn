@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://kitugyn5ghbg"]
+[gd_scene load_steps=16 format=3 uid="uid://kitugyn5ghbg"]
 
 [ext_resource type="PackedScene" uid="uid://bm3aiewi1ct1j" path="res://Scenes/Cloud.tscn" id="1_q8j7a"]
 [ext_resource type="PackedScene" uid="uid://b17cx1un7ugcf" path="res://Scenes/Block.tscn" id="2_87vd0"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://q82iqman1oio" path="res://Scenes/path_wood5.tscn" id="11_i2dcx"]
 [ext_resource type="PackedScene" uid="uid://b8iwrgqc430s" path="res://Scenes/path_wood6.tscn" id="12_3g8ki"]
 [ext_resource type="PackedScene" uid="uid://yhm3416vmo7o" path="res://Scenes/path_wood7.tscn" id="13_sjp42"]
+[ext_resource type="Script" uid="uid://beyp1q8fwfflu" path="res://Scripts/camera_3d.gd" id="14_d50dh"]
+[ext_resource type="PackedScene" uid="uid://bj6i1l2e2ojsn" path="res://Scenes/Player.tscn" id="15_e8tv8"]
 
 [node name="circuito" type="Node3D"]
 
@@ -240,3 +242,12 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -3.967, 4.5, 38.5354)
 
 [node name="cloud16" parent="." instance=ExtResource("1_q8j7a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.43632, 6.00622, 40.8562)
+
+[node name="PlayerCam" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6842, 8.68178, 109.092)
+current = true
+script = ExtResource("14_d50dh")
+target = NodePath("../Player")
+
+[node name="Player" parent="." instance=ExtResource("15_e8tv8")]
+transform = Transform3D(0.991086, 0, -0.133225, 0, 1, 0, 0.133225, 0, 0.991086, -10.1382, 1.59099, 1.07027)

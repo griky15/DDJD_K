@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{1a4c4dfb-b86f-4797-860a-6462126c6835}">
+		<property name="assetPath">
+			<value>SFX/Trampoline.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.56229166666666663</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5f8a268a-12ed-4bdb-828c-621af9be7ecd}</destination>
+		</relationship>
+	</object>
+</objects>
