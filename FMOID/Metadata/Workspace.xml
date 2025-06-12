@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="Workspace" id="{de9ae8bc-712b-4ed2-9524-2063e1a27aa5}">
 		<property name="builtBanksOutputDirectory">
-			<value>../../../../../Desktop/DDJD_K/rollin-dreams/Banks</value>
+			<value>../rollin-dreams/Banks</value>
 		</property>
 		<relationship name="masterEventFolder">
 			<destination>{a6a9a985-fe52-482c-b46b-8cc51c60f1e2}</destination>
