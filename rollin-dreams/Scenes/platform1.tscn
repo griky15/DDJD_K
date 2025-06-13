@@ -255,7 +255,6 @@ transform = Transform3D(0.991086, 0, -0.133225, 0, 1, 0, 0.133225, 0, 0.991086, 
 [node name="FmodListener3D" type="FmodListener3D" parent="."]
 
 [node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="."]
-event_name = "event:/Level 1 Background Music/Music Level 1"
 event_guid = "{82a246c1-b172-4ca1-94bb-9296cfa46b03}"
 autoplay = true
 
