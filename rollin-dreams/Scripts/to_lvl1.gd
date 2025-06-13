@@ -33,7 +33,7 @@ func _on_pressed() -> void:
 
 	await anim_player.animation_finished  # Espera a animação terminar
 
-	get_tree().change_scene_to_file("res://Scenes/platform2.tscn")
+	get_tree().change_scene_to_file("res://Scenes/platform1.tscn")
 
 
 func _on_tutorial_pressed() -> void:

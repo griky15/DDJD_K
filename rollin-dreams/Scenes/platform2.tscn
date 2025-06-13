@@ -23,7 +23,6 @@
 [ext_resource type="Script" uid="uid://cma3syyqv5fkj" path="res://Scripts/juice.gd" id="21_jmn71"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_kgox3"]
-flip_faces = true
 size = Vector2(1.3, 0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oauet"]
@@ -630,28 +629,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.737, 0, 2.65)
 [node name="Node3D13" parent="." instance=ExtResource("10_13m3d")]
 transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, -7.94703, 0.675, 1.895)
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Juice" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998937, 0.530543, 3.28377)
 script = ExtResource("21_jmn71")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Area3D"]
+[node name="Juice2" type="MeshInstance3D" parent="Juice"]
 transform = Transform3D(-0.0109779, 0, 0.99994, 0, 1, 0, -0.99994, 0, -0.0109779, -0.501139, -0.27075, 0.205079)
 mesh = SubResource("QuadMesh_kgox3")
 skeleton = NodePath("../Juice")
 surface_material_override/0 = SubResource("StandardMaterial3D_oauet")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
-transform = Transform3D(-0.0109779, 0, 0.99994, 0, 1, 0, -0.99994, 0, -0.0109779, 0.508486, -0.302058, -0.00849819)
+[node name="Juice3" type="MeshInstance3D" parent="Juice"]
+transform = Transform3D(-0.0109779, 0, 0.99994, 0, 1, 0, -0.99994, 0, -0.0109779, 0.509939, -0.263839, -0.00849819)
 mesh = SubResource("QuadMesh_kgox3")
 skeleton = NodePath("../Juice")
 surface_material_override/0 = SubResource("StandardMaterial3D_oauet")
 
-[node name="Juice" type="MeshInstance3D" parent="Area3D"]
+[node name="Juice" type="MeshInstance3D" parent="Juice"]
 mesh = SubResource("QuadMesh_vtq4w")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_glg6q")
 script = SubResource("GDScript_jmn71")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Juice"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.247209, -0.039474)
 shape = SubResource("BoxShape3D_kgox3")

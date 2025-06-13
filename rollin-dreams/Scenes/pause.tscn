@@ -42,6 +42,17 @@ func _on_menu_pressed() -> void:
 	
 	# Carregar a cena do menu principal
 	get_tree().change_scene_to_file(\"res://scenes/menu.tscn\")
+
+
+
+func _on_restart_pressed() -> void:
+	get_tree().paused = false
+
+	# Restaurar o modo do mouse
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+	# Redirecionar para a cena \"platform1\"
+	get_tree().change_scene_to_file(\"res://scenes/platform1.tscn\")
 "
 
 [node name="Pause" type="Control"]
@@ -89,6 +100,10 @@ theme_override_constants/separation = 10
 layout_mode = 2
 text = "Resume"
 
+[node name="Restart" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Restart"
+
 [node name="Menu" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Menu
@@ -99,6 +114,7 @@ layout_mode = 2
 text = "Exit"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Menu" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Menu" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
