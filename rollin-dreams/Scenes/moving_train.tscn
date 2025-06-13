@@ -6,8 +6,8 @@
 [sub_resource type="Curve3D" id="Curve3D_wohy6"]
 resource_local_to_scene = true
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_wohy6"]
-size = Vector3(0.997864, 0.393555, 0.746025)
+[sub_resource type="BoxShape3D" id="BoxShape3D_iye66"]
+size = Vector3(2.34448, 1, 1.47729)
 
 [sub_resource type="Animation" id="Animation_cjsmg"]
 resource_name = "Moving_Train"
@@ -66,9 +66,13 @@ transform = Transform3D(0.947877, 0, 0, 0, 0.947877, 0, 0, 0, 1.30241, 1.4177, -
 [node name="Train3" parent="AnimatableBody3D" instance=ExtResource("2_ijfsi")]
 transform = Transform3D(1.03489, 0, -1.86265e-09, 1.42109e-14, 1.03489, 1.95954e-14, 1.86265e-09, 1.77636e-15, 1.03489, -0.136079, 0.0633593, 0.0530155)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D"]
-transform = Transform3D(1.95624, 0, -1.86265e-09, 2.84217e-14, 1.95624, 2.86993e-14, 1.86265e-09, 2.85327e-14, 1.95624, -0.445838, 0.406306, 0.174438)
-shape = SubResource("BoxShape3D_wohy6")
+[node name="StaticBody3D" type="StaticBody3D" parent="AnimatableBody3D/Train3"]
+transform = Transform3D(1.1151, -1.06581e-14, 1.02445e-08, -1.77636e-14, -0.44018, -6.60583e-15, -9.77889e-09, -2.6687e-14, 1.21815, 0.455192, 0.786878, 0.0155553)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D/Train3/StaticBody3D"]
+transform = Transform3D(1, -5.26801e-14, 0, -5.82867e-15, 1, 1.95399e-13, 0, -1.98952e-13, 1, -0.494259, 0, -0.0118437)
+shape = SubResource("BoxShape3D_iye66")
+debug_color = Color(0, 0, 0, 0.42)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D"]
 libraries = {

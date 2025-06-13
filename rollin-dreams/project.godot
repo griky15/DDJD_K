@@ -15,6 +15,11 @@ run/main_scene="res://Scenes/level_1.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Textures/icon.png"
 
+[autoload]
+
+GameController="*res://Scripts/game_controller.gd"
+EventController="*res://Scripts/event_controller.gd"
+
 [display]
 
 window/size/viewport_width=1920
