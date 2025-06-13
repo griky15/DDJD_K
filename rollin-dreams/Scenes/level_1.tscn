@@ -36,12 +36,12 @@ size = Vector3(5.01428, 1, 6.0361)
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ca8up"]
 panorama = ExtResource("3_6swl5")
 
-[sub_resource type="Sky" id="Sky_g2ufi"]
+[sub_resource type="Sky" id="Sky_7p6j4"]
 sky_material = SubResource("PanoramaSkyMaterial_ca8up")
 
 [sub_resource type="Environment" id="Environment_dx338"]
 background_mode = 2
-sky = SubResource("Sky_g2ufi")
+sky = SubResource("Sky_7p6j4")
 glow_enabled = true
 glow_intensity = 1.2
 glow_bloom = 0.2
@@ -88,7 +88,7 @@ shape = SubResource("BoxShape3D_ka7dr")
 script = SubResource("GDScript_fyi2b")
 
 [node name="Player" parent="." instance=ExtResource("1_gvtya")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 107.443)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.407956, 107.443)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, -30, 2, 0)
@@ -131,3 +131,11 @@ label_path = NodePath(".")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -32.5633, -26.1614)
 pixel_size = 0.15
 text = "LEVEL 1"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="starUI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
