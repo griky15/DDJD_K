@@ -291,3 +291,6 @@ libraries = {
 [connection signal="mouse_entered" from="Control/Start" to="Control/Start" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Control/Start" to="Control/Start" method="_on_mouse_exited"]
 [connection signal="pressed" from="Control/Start" to="Control/Start" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/Tutorial" to="Control/Start" method="_on_tutorial_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Tutorial" to="Control/Start" method="_on_tutorial_mouse_exited"]
+[connection signal="pressed" from="Control/Tutorial" to="Control/Start" method="_on_tutorial_pressed"]

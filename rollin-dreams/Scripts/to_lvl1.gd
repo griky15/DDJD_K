@@ -33,4 +33,21 @@ func _on_pressed() -> void:
 
 	await anim_player.animation_finished  # Espera a animação terminar
 
-	get_tree().change_scene_to_file("res://Scenes/level_1.tscn")
+	get_tree().change_scene_to_file("res://Scenes/platform2.tscn")
+
+
+func _on_tutorial_pressed() -> void:
+	disabled = true  # Evita apertar o botão de novo
+	anim_player.play("fade_out_with_clouds")  # Reutiliza a animação de transição
+
+	await anim_player.animation_finished  # Espera a animação terminar
+
+	get_tree().change_scene_to_file("res://Scenes/level1.tscn")
+
+
+func _on_tutorial_mouse_entered() -> void:
+	pass # Replace with function body.
+
+
+func _on_tutorial_mouse_exited() -> void:
+	pass # Replace with function body.
