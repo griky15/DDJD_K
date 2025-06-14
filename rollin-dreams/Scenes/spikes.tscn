@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5tthpc56d07r"]
+
+[ext_resource type="Script" uid="uid://unsjlv1r573f" path="res://Scenes/Spikes.gd" id="1_a5dqs"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_m37uh"]
+lightmap_size_hint = Vector2i(5, 7)
+top_radius = 0.0
+bottom_radius = 0.05
+height = 0.25
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_a5dqs"]
+points = PackedVector3Array(0.409443, -0.984052, 0.155475, -0.415792, -1.01587, -0.130078, -0.415792, -1.01587, 0.123729, -0.0348398, 1.01587, -0.00317457, 0.218967, -1.01587, -0.384046, -0.0983319, -0.888789, 0.409443, -0.19357, -0.92061, -0.384046, 0.218967, -1.01587, 0.377697, 0.409443, -0.984052, -0.161824, 0.0284907, 1.01587, -0.0348398, 0.0602367, 0.825347, 0.0602367, -0.320554, -0.888789, 0.282459, 0.0284907, -0.888789, -0.415792, -0.320554, -0.92061, -0.288808, -0.0348398, 1.01587, 0.0284907, -0.225316, -1.01587, 0.377697, 0.0919827, -0.888789, 0.409443, 0.314205, -1.01587, 0.314205, 0.314205, -0.888789, -0.288808, -0.130078, -1.01587, -0.415792, -0.415792, -0.888789, -0.00317457, 0.409443, -0.888789, 0.0919827, -0.0348398, 0.984052, -0.0348398, -0.384046, -0.793527, 0.123729, -0.384046, -0.856969, -0.161824, 0.409443, -0.888789, -0.0983319, -0.0983319, -0.92061, -0.415792, -0.225316, -0.952232, 0.377697, 0.123729, -0.952232, -0.415792, 0.345951, -0.888789, 0.250713, 0.250713, -0.888789, 0.345951, 0.409443, -1.01587, -0.161824)
+
+[node name="Spikes" type="Node3D"]
+
+[node name="Area3D" type="Area3D" parent="."]
+script = ExtResource("1_a5dqs")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.246603, 0)
+mesh = SubResource("CylinderMesh_m37uh")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.246603, 0)
+shape = SubResource("ConvexPolygonShape3D_a5dqs")
