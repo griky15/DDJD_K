@@ -128,3 +128,7 @@ shape = SubResource("ConcavePolygonShape3D_8lpw3")
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014, 0.02, 0.0283185)
 mesh = SubResource("SphereMesh_67uk4")
+
+[node name="PortalSoundEmitter" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/SFX/Portal"
+event_guid = "{b1948d44-1b05-4342-969e-01a325c0e39b}"

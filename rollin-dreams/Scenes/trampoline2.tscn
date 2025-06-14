@@ -65,3 +65,7 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="BounceArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0947844, 0)
 shape = SubResource("ConcavePolygonShape3D_2dqah")
+
+[node name="TrampolineSoundEmitter" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/SFX/Trampoline"
+event_guid = "{4606ade2-b0b7-4898-9c02-fe09b3b30918}"

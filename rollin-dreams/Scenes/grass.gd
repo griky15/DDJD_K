@@ -1,5 +1,5 @@
 extends Area3D
-@export var sound_emitter_path: NodePath = "JuiceSoundEmitter"  # Path to FmodEventEmitter3D
+@export var sound_emitter_path: NodePath = "GrassSoundEmitter"  # Path to FmodEventEmitter3D
 
 func _ready():
 	body_entered.connect(_on_body_entered)
@@ -12,13 +12,11 @@ func _on_body_entered(body):
 	if body.has_method("enterJuice"):
 		var sound_emitter = get_node_or_null(sound_emitter_path)
 		if sound_emitter:
-			$JuiceSoundEmitter.play()
+			$GrassSoundEmitter.play()
 			sound_emitter.play()  # Use play() to start the event
 		else:
 			push_warning("FmodEventEmitter3D not found at: ", sound_emitter_path)
-		body.enterJuice()
 
 func _on_body_exited(body):
 	if body.has_method("exitJuice"):
-		body.exitJuice()
-		$JuiceSoundEmitter.stop()
+		$GrassSoundEmitter.stop()
