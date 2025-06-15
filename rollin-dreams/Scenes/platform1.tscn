@@ -13,12 +13,12 @@
 [ext_resource type="PackedScene" uid="uid://q82iqman1oio" path="res://Scenes/path_wood5.tscn" id="11_i2dcx"]
 [ext_resource type="PackedScene" uid="uid://b8iwrgqc430s" path="res://Scenes/path_wood6.tscn" id="12_3g8ki"]
 [ext_resource type="PackedScene" uid="uid://yhm3416vmo7o" path="res://Scenes/path_wood7.tscn" id="13_sjp42"]
-[ext_resource type="Script" uid="uid://beyp1q8fwfflu" path="res://Scripts/camera_3d.gd" id="14_d50dh"]
+[ext_resource type="Script" uid="uid://s6bxriq80kdw" path="res://Scripts/camera_3d.gd" id="14_d50dh"]
 [ext_resource type="PackedScene" uid="uid://bj6i1l2e2ojsn" path="res://Scenes/Player.tscn" id="15_e8tv8"]
 [ext_resource type="PackedScene" uid="uid://c5tthpc56d07r" path="res://Scenes/spikes.tscn" id="16_e8tv8"]
 [ext_resource type="Script" uid="uid://cgrhuh5echv83" path="res://Scripts/timer.gd" id="17_uf7x8"]
 
-[node name="circuito" type="Node3D"]
+[node name="circuito2" type="Node3D"]
 
 [node name="cloud" parent="." instance=ExtResource("1_q8j7a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.23491, 3.35377, -1.7806)
