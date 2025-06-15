@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://d2rfxret8lfjt"]
 
 [ext_resource type="Texture2D" uid="uid://dkr4yfsrlqws5" path="res://Textures/menu2.webp" id="1_i0ice"]
-[ext_resource type="Script" path="res://Scripts/to_lvl1.gd" id="2_82kfo"]
+[ext_resource type="Script" uid="uid://h8qtyb1ii6e4" path="res://Scripts/to_lvl1.gd" id="2_82kfo"]
 [ext_resource type="Texture2D" uid="uid://ji5igm6ta4e" path="res://Textures/start.png" id="2_wxfa3"]
 [ext_resource type="Texture2D" uid="uid://wih2a4rf1p7a" path="res://Textures/tutorial.png" id="4_q2nnv"]
 [ext_resource type="Texture2D" uid="uid://87odkgq3u2c4" path="res://Textures/cloud2.png" id="5_mqr2d"]
-[ext_resource type="Script" path="res://Scenes/to_ptf1.gd" id="5_qx6sa"]
+[ext_resource type="Script" uid="uid://bm3ud7hllb2jw" path="res://Scenes/to_ptf1.gd" id="5_qx6sa"]
 [ext_resource type="Texture2D" uid="uid://dpa5jhoucw0k6" path="res://Textures/cloud1.png" id="6_eqnfg"]
 
 [sub_resource type="Animation" id="Animation_sye1k"]
@@ -221,8 +221,8 @@ tracks/7/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f6j0m"]
 _data = {
-"RESET": SubResource("Animation_sye1k"),
-"fade_out_with_clouds": SubResource("Animation_f6dyo")
+&"RESET": SubResource("Animation_sye1k"),
+&"fade_out_with_clouds": SubResource("Animation_f6dyo")
 }
 
 [node name="Menu" type="Node2D"]
@@ -300,7 +300,7 @@ texture = ExtResource("6_eqnfg")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Control/CanvasLayer"]
 root_node = NodePath("../..")
 libraries = {
-"": SubResource("AnimationLibrary_f6j0m")
+&"": SubResource("AnimationLibrary_f6j0m")
 }
 
 [connection signal="mouse_entered" from="Control/Start" to="Control/Start" method="_on_mouse_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://kitugyn5ghbg"]
+[gd_scene load_steps=18 format=3 uid="uid://kitugyn5ghbg"]
 
 [ext_resource type="PackedScene" uid="uid://bm3aiewi1ct1j" path="res://Scenes/Cloud.tscn" id="1_q8j7a"]
 [ext_resource type="PackedScene" uid="uid://b17cx1un7ugcf" path="res://Scenes/Block.tscn" id="2_87vd0"]
@@ -13,9 +13,10 @@
 [ext_resource type="PackedScene" uid="uid://q82iqman1oio" path="res://Scenes/path_wood5.tscn" id="11_i2dcx"]
 [ext_resource type="PackedScene" uid="uid://b8iwrgqc430s" path="res://Scenes/path_wood6.tscn" id="12_3g8ki"]
 [ext_resource type="PackedScene" uid="uid://yhm3416vmo7o" path="res://Scenes/path_wood7.tscn" id="13_sjp42"]
-[ext_resource type="Script" path="res://Scripts/camera_3d.gd" id="14_d50dh"]
+[ext_resource type="Script" uid="uid://beyp1q8fwfflu" path="res://Scripts/camera_3d.gd" id="14_d50dh"]
 [ext_resource type="PackedScene" uid="uid://bj6i1l2e2ojsn" path="res://Scenes/Player.tscn" id="15_e8tv8"]
 [ext_resource type="PackedScene" uid="uid://c5tthpc56d07r" path="res://Scenes/spikes.tscn" id="16_e8tv8"]
+[ext_resource type="Script" uid="uid://cgrhuh5echv83" path="res://Scripts/timer.gd" id="17_uf7x8"]
 
 [node name="circuito" type="Node3D"]
 
@@ -254,45 +255,15 @@ target = NodePath("../Player")
 transform = Transform3D(0.991086, 0, -0.133225, 0, 1, 0, 0.133225, 0, 0.991086, -2.51278, 1.59099, 0.0588478)
 
 [node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
 event_name = "event:/Level 1 Background Music/Music Level 1"
 event_guid = "{82a246c1-b172-4ca1-94bb-9296cfa46b03}"
 autoplay = true
-script = null
 
 [node name="FmodListener3D" type="FmodListener3D" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
 transform = Transform3D(0.991086, 0, -0.133225, 0, 1, 0, 0.133225, 0, 0.991086, -2.51278, 1.59099, 0.0588478)
-script = null
 
 [node name="FmodBankLoader" type="FmodBankLoader" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
 bank_paths = ["res://Banks/Desktop/Master.strings.bank", "res://Banks/Desktop/Master.bank", "res://Banks/Desktop/SFX.bank"]
-script = null
 
 [node name="Node3D9" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0930045, 0.229599, -0.369115)
@@ -349,3 +320,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0523561, 0.229599, 0.251272
 
 [node name="Spikes10" parent="." instance=ExtResource("16_e8tv8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.240541, 0.229599, -0.364052)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("17_uf7x8")
+
+[node name="TimerLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="CountdownTimer" type="Timer" parent="Control"]

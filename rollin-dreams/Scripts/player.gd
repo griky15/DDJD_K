@@ -2,10 +2,17 @@ extends CharacterBody3D
 
 const SPEED = 5
 const JUMP_VELOCITY = 5
+const FALL_LIMIT = -10  # Limite de queda para game over
+
 var current_speed = SPEED  # Velocidade atual
 var is_in_juice = false    # Flag para saber se está no sumo
 
 func _physics_process(delta: float) -> void:
+	# Verifica se o player caiu muito baixo
+	if global_position.y < FALL_LIMIT:
+		game_over()
+		return  # Para o processamento para evitar bugs
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -26,6 +33,11 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, current_speed)
 	
 	move_and_slide()
+
+func game_over():
+	# Muda para a cena de game over
+	print("Game Over - Player caiu!")
+	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
 
 func jumpTrampoline():
 	velocity.y = 1.5 * JUMP_VELOCITY
