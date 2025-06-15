@@ -1,17 +1,24 @@
 class_name Player extends CharacterBody3D
+const SPEED = 3.5
+const JUMP_VELOCITY = 6
+const FALL_LIMIT = -15
+var current_speed = SPEED
+var is_in_juice = false
 
-const SPEED = 5
-const JUMP_VELOCITY = 5
-const FALL_LIMIT = -10  # Limite de queda para game over
-
-var current_speed = SPEED  # Velocidade atual
-var is_in_juice = false    # Flag para saber se está no sumo
+func _ready():
+	# Verifica se está na cena level_1 e ajusta a velocidade
+	var current_scene = get_tree().current_scene.scene_file_path
+	if current_scene == "res://Scenes/level_1.tscn":
+		current_speed = 10
+		print("Level 1 detectado - velocidade aumentada para 10!")
+	else:
+		current_speed = SPEED
 
 func _physics_process(delta: float) -> void:
 	# Verifica se o player caiu muito baixo
 	if global_position.y < FALL_LIMIT:
 		game_over()
-		return  # Para o processamento para evitar bugs
+		return
 	
 	# Add the gravity.
 	if not is_on_floor():
@@ -35,21 +42,27 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func game_over():
-	# Muda para a cena de game over
-	print("Game Over - Player caiu!")
-	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+	# Verifica se está no level_1 para decidir para onde ir
+	var current_scene = get_tree().current_scene.scene_file_path
+	
+	if current_scene == "res://Scenes/level_1.tscn":
+		print("Level 1 - Voltando para o menu!")
+		get_tree().change_scene_to_file("res://Scenes/menu.tscn")
+	else:
+		print("Game Over - Player caiu!")
+		get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
 
 func jumpTrampoline():
 	velocity.y = 1.5 * JUMP_VELOCITY
 	print("Trampoline bounce!")
 
-# Funções para o sumo
 func enterJuice():
 	is_in_juice = true
-	current_speed = SPEED * 0.3  # Reduz para 30% da velocidade
+	var base_speed = 10 if get_tree().current_scene.scene_file_path == "res://Scenes/level_1.tscn" else SPEED
+	current_speed = base_speed * 0.3
 	print("Entrou no sumo - velocidade reduzida!")
 
 func exitJuice():
 	is_in_juice = false
-	current_speed = SPEED  # Volta à velocidade normal
+	current_speed = 10 if get_tree().current_scene.scene_file_path == "res://Scenes/level_1.tscn" else SPEED
 	print("Saiu do sumo - velocidade normal!")
