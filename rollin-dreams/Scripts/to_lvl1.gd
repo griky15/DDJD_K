@@ -1,5 +1,4 @@
 extends TextureButton
-
 @onready var tween := create_tween()
 @onready var anim_player := $"../CanvasLayer/AnimationPlayer"
 @onready var clouds1 := $"../CanvasLayer/CloudTransition1"
@@ -12,13 +11,14 @@ var hover_scale := Vector2(0.82, 0.82)
 
 func _ready():
 	scale = normal_scale
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	clouds1.position = Vector2(-1774, -1018) 
 	clouds2.position = Vector2(-1089, 605) 
 	clouds3.position = Vector2(1313, 358) 
 	clouds4.position = Vector2(1539, -927) 
 
 func _on_mouse_entered():
-	tween.kill() # Encerra tween anterior se tiver
+	tween.kill()
 	tween = create_tween()
 	tween.tween_property(self, "scale", hover_scale, 0.2)
 
@@ -28,26 +28,7 @@ func _on_mouse_exited():
 	tween.tween_property(self, "scale", normal_scale, 0.2)
 
 func _on_pressed() -> void:
-	disabled = true  # Evita apertar o botão de novo
-	anim_player.play("fade_out_with_clouds")  # Nome da sua animação
-
-	await anim_player.animation_finished  # Espera a animação terminar
-
-	get_tree().change_scene_to_file("res://Scenes/platform1.tscn")
-
-
-func _on_tutorial_pressed() -> void:
-	disabled = true  # Evita apertar o botão de novo
-	anim_player.play("fade_out_with_clouds")  # Reutiliza a animação de transição
-
-	await anim_player.animation_finished  # Espera a animação terminar
-
-	get_tree().change_scene_to_file("res://Scenes/level1.tscn")
-
-
-func _on_tutorial_mouse_entered() -> void:
-	pass # Replace with function body.
-
-
-func _on_tutorial_mouse_exited() -> void:
-	pass # Replace with function body. 
+	disabled = true
+	anim_player.play("fade_out_with_clouds")
+	await anim_player.animation_finished
+	get_tree().call_deferred("change_scene_to_file", "res://Scenes/platform1.tscn")

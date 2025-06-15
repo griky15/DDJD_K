@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dlrkismblbyff"]
+[gd_scene load_steps=28 format=3 uid="uid://dlrkismblbyff"]
 
 [ext_resource type="PackedScene" uid="uid://c4q15vdnufmik" path="res://Scenes/grass.tscn" id="1_d06sr"]
 [ext_resource type="PackedScene" uid="uid://dy8nroanf8gnn" path="res://Scenes/mushroom2.tscn" id="2_145ep"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://d2rfxret8lfjt" path="res://Scenes/menu.tscn" id="15_q8woj"]
 [ext_resource type="Script" uid="uid://cq6jr2w0q1wiv" path="res://Scripts/trampoline.gd" id="17_ka580"]
 [ext_resource type="Script" uid="uid://cma3syyqv5fkj" path="res://Scripts/juice.gd" id="21_jmn71"]
+[ext_resource type="PackedScene" uid="uid://qwcjooblaj2m" path="res://Scenes/pause.tscn" id="21_kgox3"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_kgox3"]
 size = Vector2(1.3, 0.5)
@@ -660,3 +661,6 @@ shape = SubResource("BoxShape3D_kgox3")
 
 [node name="FmodBankLoader" type="FmodBankLoader" parent="."]
 bank_paths = ["res://Banks/Desktop/SFX.bank", "res://Banks/Desktop/Master.bank", "res://Banks/Desktop/Master.strings.bank"]
+
+[node name="Pause" parent="." instance=ExtResource("21_kgox3")]
+visible = false

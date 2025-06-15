@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dw2yptxahu735"]
+[gd_scene load_steps=37 format=3 uid="uid://dw2yptxahu735"]
 
 [ext_resource type="Script" uid="uid://ddj4pvelf6r20" path="res://Scripts/trilho_1.gd" id="1_qqec5"]
 [ext_resource type="Texture2D" uid="uid://xah045shsb7h" path="res://Textures/wood.webp" id="2_jsivw"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" uid="uid://s6bxriq80kdw" path="res://Scripts/camera_3d.gd" id="15_bnldx"]
 [ext_resource type="Texture2D" uid="uid://d3wt0fipymvwk" path="res://Textures/industrial_sunset_puresky_2k.exr" id="16_ae8h3"]
 [ext_resource type="Script" path="res://Scenes/candy_manager.gd" id="17_ae8h3"]
+[ext_resource type="PackedScene" uid="uid://qwcjooblaj2m" path="res://Scenes/pause.tscn" id="18_ogxw8"]
 
 [sub_resource type="Curve3D" id="Curve3D_qj3xv"]
 _data = {
@@ -123,7 +124,7 @@ glow_enabled = true
 glow_intensity = 1.2
 glow_bloom = 0.2
 
-[node name="Node3D2" type="Node3D"]
+[node name="Node3D3" type="Node3D"]
 
 [node name="coluna" parent="." instance=ExtResource("6_iiorx")]
 transform = Transform3D(-6.11959e-08, 0, 1.4, 0, 1.4, 0, -1.4, 0, -6.11959e-08, -25.3878, 2.05053, -2.67077)
@@ -439,6 +440,9 @@ scale = Vector2(6.07025, 5.87804)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 15
 text = "0"
+
+[node name="Pause" parent="." instance=ExtResource("18_ogxw8")]
+visible = false
 
 [connection signal="curve_changed" from="trilho3" to="trilho3" method="_on_curve_changed"]
 [connection signal="curve_changed" from="trilho2" to="trilho2" method="_on_curve_changed"]

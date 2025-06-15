@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://kitugyn5ghbg"]
+[gd_scene load_steps=19 format=3 uid="uid://kitugyn5ghbg"]
 
 [ext_resource type="PackedScene" uid="uid://bm3aiewi1ct1j" path="res://Scenes/Cloud.tscn" id="1_q8j7a"]
 [ext_resource type="PackedScene" uid="uid://b17cx1un7ugcf" path="res://Scenes/Block.tscn" id="2_87vd0"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bj6i1l2e2ojsn" path="res://Scenes/Player.tscn" id="15_e8tv8"]
 [ext_resource type="PackedScene" uid="uid://c5tthpc56d07r" path="res://Scenes/spikes.tscn" id="16_e8tv8"]
 [ext_resource type="Script" uid="uid://cgrhuh5echv83" path="res://Scripts/timer.gd" id="17_uf7x8"]
+[ext_resource type="PackedScene" uid="uid://qwcjooblaj2m" path="res://Scenes/pause.tscn" id="18_taear"]
 
 [node name="circuito2" type="Node3D"]
 
@@ -334,3 +335,6 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="CountdownTimer" type="Timer" parent="Control"]
+
+[node name="Pause" parent="." instance=ExtResource("18_taear")]
+visible = false
