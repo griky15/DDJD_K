@@ -1,3 +1,3 @@
 extends Node
 
-signal star_collected(value:int)
+signal candy_collected(value:int)

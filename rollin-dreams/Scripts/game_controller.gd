@@ -1,5 +1,5 @@
 extends Node
-var total_stars: int =0
-func star_collected(value:int):
-	total_stars == value
-	EventController.emit_signal("star_collected",total_stars)
+var total_candy: int =0
+func candy_collected(value:int):
+	total_candy == value
+	EventController.emit_signal("candy_collected",total_candy)

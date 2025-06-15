@@ -53,6 +53,10 @@ func _process(delta: float):
 	# Ensure the camera always looks at the player
 	look_at(target_node.global_transform.origin, Vector3.UP)
 
+	# Sync player's yaw rotation with the camera's yaw
+	if enable_mouse_control:
+		target_node.rotation.y = camera_yaw
+
 func _unhandled_input(event):
 	# Optional: Toggle mouse capture with a key (e.g., ESC)
 	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
