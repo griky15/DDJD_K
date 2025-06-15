@@ -66,4 +66,8 @@ autoplay = "spin"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="world/geometry_0/Area3D" index="0"]
 shape = SubResource("SphereShape3D_0l0nv")
 
+[node name="CandySoundEmitter" type="FmodEventEmitter2D" parent="." index="1"]
+event_name = "event:/SFX/Collectables"
+event_guid = "{57b0b0f6-9746-42fa-aaea-638ded2bc9d1}"
+
 [connection signal="body_entered" from="world/geometry_0/Area3D" to="." method="_on_area_3d_body_entered"]

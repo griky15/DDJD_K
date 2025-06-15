@@ -508,3 +508,9 @@ mesh = SubResource("QuadMesh_5s2m5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D24/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_ykf2y")
+
+[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/SFX/Train"
+event_guid = "{0fe41873-614b-4942-8a9e-7b8d53bf6d7c}"
+autoplay = true
+volume = 0.0
