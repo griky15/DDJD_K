@@ -29,7 +29,7 @@ DSP/dsp_buffer_count=4
 [application]
 
 config/name="Rollin Dreams"
-run/main_scene="uid://dw2yptxahu735"
+run/main_scene="uid://kitugyn5ghbg"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Textures/icon.png"
 

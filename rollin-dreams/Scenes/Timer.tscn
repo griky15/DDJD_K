@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4wwrp12hlxj"]
+
+[ext_resource type="Script" uid="uid://cgrhuh5echv83" path="res://Scripts/timer.gd" id="1_notwg"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_notwg")
+
+[node name="TimerLabel" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="CountdownTimer" type="Timer" parent="."]

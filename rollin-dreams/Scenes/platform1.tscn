@@ -19,7 +19,7 @@
 [ext_resource type="Script" uid="uid://cgrhuh5echv83" path="res://Scripts/timer.gd" id="17_uf7x8"]
 [ext_resource type="PackedScene" uid="uid://qwcjooblaj2m" path="res://Scenes/pause.tscn" id="18_taear"]
 
-[node name="circuito2" type="Node3D"]
+[node name="circuito3" type="Node3D"]
 
 [node name="cloud" parent="." instance=ExtResource("1_q8j7a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.23491, 3.35377, -1.7806)
