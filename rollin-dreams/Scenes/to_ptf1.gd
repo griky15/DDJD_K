@@ -3,8 +3,8 @@ extends TextureButton
 
 ## --- PARÂMETROS EDITÁVEIS NO INSPECTOR -----------------
 @export var target_scene_path : String  = "res://Scenes/level_1.tscn"
-@export var normal_scale      : Vector2 = Vector2(0.3,  0.3)
-@export var hover_scale       : Vector2 = Vector2(0.31, 0.31)
+@export var normal_scale      : Vector2 = Vector2(0.4,  0.4)
+@export var hover_scale       : Vector2 = Vector2(0.41, 0.41)
 @export var tween_time        : float  = 0.2
 ## --------------------------------------------------------
 
