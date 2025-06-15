@@ -303,6 +303,16 @@ libraries = {
 &"": SubResource("AnimationLibrary_f6j0m")
 }
 
+[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/Music Menu"
+event_guid = "{a1076052-3c33-4e63-afc7-78beb417d06c}"
+autoplay = true
+
+[node name="FmodListener3D" type="FmodListener3D" parent="."]
+
+[node name="FmodBankLoader" type="FmodBankLoader" parent="."]
+bank_paths = ["res://Banks/Desktop/Master.strings.bank", "res://Banks/Desktop/Master.bank", "res://Banks/Desktop/SFX.bank"]
+
 [connection signal="mouse_entered" from="Control/Start" to="Control/Start" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Control/Start" to="Control/Start" method="_on_mouse_exited"]
 [connection signal="pressed" from="Control/Start" to="Control/Start" method="_on_pressed"]

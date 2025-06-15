@@ -365,7 +365,7 @@ curve = SubResource("Curve3D_igcvn")
 transform = Transform3D(-0.988827, 0.103151, -0.106071, -1.1174e-08, 0.71674, 0.697096, 0.147957, 0.689378, -0.708893, -0.249123, 1.86879, -2.09625)
 
 [node name="AnimatableBody3D" parent="Moving_Train2" index="1"]
-transform = Transform3D(0.112868, 0.103151, -0.988074, -0.697079, 0.71674, -0.0047937, 0.707859, 0.689378, 0.152828, -0.249123, 1.86879, -2.09625)
+transform = Transform3D(0.112868, 0.103151, -0.988074, -0.697079, 0.71674, -0.00479368, 0.707859, 0.689378, 0.152828, -0.249123, 1.86879, -2.09625)
 
 [node name="Moving_Train3" parent="." instance=ExtResource("11_6yvrd")]
 transform = Transform3D(0.126459, 0, -0.991972, 0, 1, 0, 0.991972, 0, 0.126459, -33.6392, 0.719844, -33.1579)
@@ -405,7 +405,9 @@ script = ExtResource("15_bnldx")
 target = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("14_mnjf6")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -43, 3.68367, -11.3738)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -36.8868, 3.34567, -32.6447)
+
+[node name="FmodListener3D" type="FmodListener3D" parent="Player"]
 
 [node name="star6" parent="." instance=ExtResource("7_oef7s")]
 transform = Transform3D(0.774675, 0, 0.363447, 0, 0.775966, 0, -0.409026, 0, 0.68835, -31.5582, 3.23844, 8.91054)
@@ -414,7 +416,7 @@ transform = Transform3D(0.774675, 0, 0.363447, 0, 0.775966, 0, -0.409026, 0, 0.6
 transform = Transform3D(-6.11959e-08, 0, 1.4, 0, 1.4, 0, -1.4, 0, -6.11959e-08, 6.06148, 2.04158, 2.76129)
 
 [node name="star7" parent="." instance=ExtResource("7_oef7s")]
-transform = Transform3D(0.774675, 0, 0.363447, 0, 0.775966, 0, -0.409026, 0, 0.68835, -37.1688, 3.68209, -31.8071)
+transform = Transform3D(0.774675, 0, 0.363447, 0, 0.775966, 0, -0.409026, 0, 0.68835, -37.1688, 3.68209, -31.0426)
 
 [node name="Node3D11" parent="." instance=ExtResource("6_bgq40")]
 transform = Transform3D(-6.11959e-08, 0, 1.4, 0, 1.4, 0, -1.4, 0, -6.11959e-08, 6.34184, 2.09375, -8.85868)
@@ -443,6 +445,15 @@ text = "0"
 
 [node name="Pause" parent="." instance=ExtResource("18_ogxw8")]
 visible = false
+
+[node name="FmodBankLoader" type="FmodBankLoader" parent="."]
+bank_paths = ["res://Banks/Desktop/Master.strings.bank", "res://Banks/Desktop/Master.bank", "res://Banks/Desktop/SFX.bank"]
+
+[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/Level 2 Background Music/Music Level 2"
+event_guid = "{051a19b4-4168-4229-b7dd-e7948424bda2}"
+autoplay = true
+volume = 0.0
 
 [connection signal="curve_changed" from="trilho3" to="trilho3" method="_on_curve_changed"]
 [connection signal="curve_changed" from="trilho2" to="trilho2" method="_on_curve_changed"]
