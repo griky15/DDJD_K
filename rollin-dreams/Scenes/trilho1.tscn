@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bjpgsqwyruv52"]
 
-[ext_resource type="Script" uid="uid://ddj4pvelf6r20" path="res://Scripts/trilho_1.gd" id="1_x8k0a"]
+[ext_resource type="Script" uid="uid://cpq28o0hffbo5" path="res://Scripts/trilho_1.gd" id="1_x8k0a"]
 [ext_resource type="Texture2D" uid="uid://xah045shsb7h" path="res://Textures/wood.webp" id="2_ormgo"]
 
 [sub_resource type="Curve3D" id="Curve3D_8p75y"]
@@ -53,7 +53,6 @@ path_interval_type = 0
 path_interval = 1.0
 path_simplify_angle = 0.0
 path_rotation = 2
-path_rotation_accurate = false
 path_local = false
 path_continuous_u = true
 path_u_distance = 1.0
@@ -70,7 +69,6 @@ path_interval_type = 0
 path_interval = 1.0
 path_simplify_angle = 0.0
 path_rotation = 2
-path_rotation_accurate = false
 path_local = false
 path_continuous_u = true
 path_u_distance = 1.0
