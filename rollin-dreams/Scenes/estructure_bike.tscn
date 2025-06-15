@@ -36,7 +36,7 @@ albedo_color = Color(1, 0.941176, 0.498039, 1)
 rim_enabled = true
 rim = 0.2
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D2" type="Node3D"]
 
 [node name="Path3D" type="Path3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.858338, -0.80706)
@@ -51,7 +51,6 @@ path_interval_type = 0
 path_interval = 0.01
 path_simplify_angle = 0.0
 path_rotation = 2
-path_rotation_accurate = false
 path_local = false
 path_continuous_u = true
 path_u_distance = 1.0
@@ -72,7 +71,6 @@ path_interval_type = 0
 path_interval = 0.01
 path_simplify_angle = 0.0
 path_rotation = 2
-path_rotation_accurate = false
 path_local = false
 path_continuous_u = true
 path_u_distance = 1.0
@@ -92,7 +90,6 @@ path_interval_type = 0
 path_interval = 0.01
 path_simplify_angle = 0.0
 path_rotation = 2
-path_rotation_accurate = false
 path_local = false
 path_continuous_u = true
 path_u_distance = 1.0
