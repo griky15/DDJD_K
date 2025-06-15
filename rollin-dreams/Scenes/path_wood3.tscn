@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://vqt3o601obr"]
+[gd_scene load_steps=10 format=3 uid="uid://vqt3o601obr"]
 
 [ext_resource type="Texture2D" uid="uid://xah045shsb7h" path="res://Textures/wood.webp" id="1_if6we"]
 [ext_resource type="Texture2D" uid="uid://dkoikfrwmfckc" path="res://Textures/A.png" id="2_yv5qj"]
+[ext_resource type="Script" uid="uid://cqow23whajur2" path="res://Scenes/wood.gd" id="3_ej2dt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fgk7e"]
 albedo_color = Color(0.705882, 0.458824, 0.32549, 1)
@@ -55,3 +56,25 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(0.98, 0, 0, 0, 0.98, 0, 0, 0, 0.98, 0.75, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_ej2dt")
+
+[node name="Area3D" type="Area3D" parent="StaticBody3D"]
+script = ExtResource("3_ej2dt")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0320856, 0.0531758, 0)
+shape = SubResource("ConcavePolygonShape3D_odwlr")
+
+[node name="WoodSoundEmitter" type="FmodEventEmitter3D" parent="StaticBody3D/Area3D"]
+event_name = "event:/Marble Rolling"
+event_guid = "{7fd93025-084c-4eb1-bb32-956a0779c930}"
+
+[node name="Area3D2" type="Area3D" parent="StaticBody3D"]
+script = ExtResource("3_ej2dt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/Area3D2"]
+transform = Transform3D(0.98, 0, 0, 0, 0.98, 0, 0, 0, 0.98, 0.733735, 0.0795256, 0)
+shape = SubResource("ConcavePolygonShape3D_ej2dt")
+
+[node name="WoodSoundEmitter" type="FmodEventEmitter3D" parent="StaticBody3D/Area3D2"]
+event_name = "event:/Marble Rolling"
+event_guid = "{7fd93025-084c-4eb1-bb32-956a0779c930}"

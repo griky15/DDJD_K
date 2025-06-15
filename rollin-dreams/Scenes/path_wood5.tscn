@@ -1,7 +1,8 @@
-[gd_scene load_steps=29 format=3 uid="uid://q82iqman1oio"]
+[gd_scene load_steps=31 format=3 uid="uid://q82iqman1oio"]
 
 [ext_resource type="Texture2D" uid="uid://dkoikfrwmfckc" path="res://Textures/A.png" id="1_u2axg"]
 [ext_resource type="Texture2D" uid="uid://xah045shsb7h" path="res://Textures/wood.webp" id="2_1dsv7"]
+[ext_resource type="Script" uid="uid://cqow23whajur2" path="res://Scenes/wood.gd" id="3_fl62m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fr71q"]
 albedo_color = Color(0.705537, 0.459715, 0.32725, 1)
@@ -104,6 +105,9 @@ size = Vector3(1, 0.5, 1)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mmgdp"]
 data = PackedVector3Array(0, 0.25, 0.5, 0.5, -0.25, 0.5, -0.5, -0.25, 0.5, 0, 0.25, -0.5, -0.5, -0.25, -0.5, 0.5, -0.25, -0.5, 0, 0.25, 0.5, 0, 0.25, -0.5, 0.5, -0.25, 0.5, 0, 0.25, -0.5, 0.5, -0.25, -0.5, 0.5, -0.25, 0.5, 0, 0.25, -0.5, 0, 0.25, 0.5, -0.5, -0.25, -0.5, 0, 0.25, 0.5, -0.5, -0.25, 0.5, -0.5, -0.25, -0.5, -0.5, -0.25, 0.5, 0.5, -0.25, 0.5, -0.5, -0.25, -0.5, 0.5, -0.25, 0.5, 0.5, -0.25, -0.5, -0.5, -0.25, -0.5)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_bsu55"]
+size = Vector3(1.09393, 1.06458, 1)
+
 [node name="Node3D" type="Node3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
@@ -197,3 +201,14 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D10" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(-1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, 0, 0.25)
 shape = SubResource("ConcavePolygonShape3D_mmgdp")
+
+[node name="Area3D" type="Area3D" parent="StaticBody3D"]
+script = ExtResource("3_fl62m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00497437, 0.0322876, 0)
+shape = SubResource("BoxShape3D_bsu55")
+
+[node name="WoodSoundEmitter" type="FmodEventEmitter3D" parent="StaticBody3D/Area3D"]
+event_name = "event:/Marble Rolling"
+event_guid = "{7fd93025-084c-4eb1-bb32-956a0779c930}"

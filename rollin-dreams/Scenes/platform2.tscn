@@ -664,3 +664,8 @@ bank_paths = ["res://Banks/Desktop/SFX.bank", "res://Banks/Desktop/Master.bank",
 
 [node name="Pause" parent="." instance=ExtResource("21_kgox3")]
 visible = false
+
+[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/Level 2 Background Music/Music Level 2"
+event_guid = "{051a19b4-4168-4229-b7dd-e7948424bda2}"
+autoplay = true

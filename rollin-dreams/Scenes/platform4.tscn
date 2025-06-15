@@ -1,6 +1,6 @@
 [gd_scene load_steps=37 format=3 uid="uid://dw2yptxahu735"]
 
-[ext_resource type="Script" uid="uid://ddj4pvelf6r20" path="res://Scripts/trilho_1.gd" id="1_qqec5"]
+[ext_resource type="Script" uid="uid://cpq28o0hffbo5" path="res://Scripts/trilho_1.gd" id="1_qqec5"]
 [ext_resource type="Texture2D" uid="uid://xah045shsb7h" path="res://Textures/wood.webp" id="2_jsivw"]
 [ext_resource type="PackedScene" uid="uid://bjpgsqwyruv52" path="res://Scenes/trilho1.tscn" id="3_akgtl"]
 [ext_resource type="PackedScene" uid="uid://dqei8ock2xrc" path="res://Scenes/coluna2.tscn" id="6_bgq40"]
@@ -365,7 +365,7 @@ curve = SubResource("Curve3D_igcvn")
 transform = Transform3D(-0.988827, 0.103151, -0.106071, -1.1174e-08, 0.71674, 0.697096, 0.147957, 0.689378, -0.708893, -0.249123, 1.86879, -2.09625)
 
 [node name="AnimatableBody3D" parent="Moving_Train2" index="1"]
-transform = Transform3D(0.112868, 0.103151, -0.988074, -0.697079, 0.71674, -0.00479368, 0.707859, 0.689378, 0.152828, -0.249123, 1.86879, -2.09625)
+transform = Transform3D(0.112868, 0.103151, -0.988074, -0.697079, 0.71674, -0.0047937, 0.707859, 0.689378, 0.152828, -0.249123, 1.86879, -2.09625)
 
 [node name="Moving_Train3" parent="." instance=ExtResource("11_6yvrd")]
 transform = Transform3D(0.126459, 0, -0.991972, 0, 1, 0, 0.991972, 0, 0.126459, -33.6392, 0.719844, -33.1579)
