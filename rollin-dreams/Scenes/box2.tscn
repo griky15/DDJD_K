@@ -109,6 +109,8 @@ shape = SubResource("ConvexPolygonShape3D_kiqpk")
 
 [node name="star" parent="." instance=ExtResource("1_dvxi1")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.0498112, 0, -0.72412)
+visible = false
 
 [node name="star2" parent="." instance=ExtResource("1_dvxi1")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.0498112, 0, 0.725686)
+visible = false
