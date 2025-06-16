@@ -12,14 +12,14 @@ func _ready():
 	var current_scene = get_tree().current_scene.scene_file_path
 	
 	if current_scene == "res://Scenes/platform4.tscn":
-		time_left = 30  # Começa com 30 segundos na platform4
+		time_left = 90  # Começa com 30 segundos na platform4
 	else:
-		time_left = 40  # Tempo padrão para outras cenas
+		time_left = 60  # Tempo padrão para outras cenas
 	
 	# Configura o timer para contar a cada 1 segundo
 	countdown_timer.wait_time = 1.0
 	countdown_timer.timeout.connect(_on_timer_timeout)
-	
+	timer_label.add_theme_color_override("font_color", Color(1, 0, 0))  
 	# Atualiza o label inicial
 	update_timer_display()
 	
