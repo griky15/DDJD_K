@@ -1,6 +1,6 @@
 [gd_scene load_steps=40 format=3 uid="uid://dw2yptxahu735"]
 
-[ext_resource type="Script" uid="uid://ddj4pvelf6r20" path="res://Scripts/trilho_1.gd" id="1_qqec5"]
+[ext_resource type="Script" uid="uid://cpq28o0hffbo5" path="res://Scripts/trilho_1.gd" id="1_qqec5"]
 [ext_resource type="Texture2D" uid="uid://xah045shsb7h" path="res://Textures/wood.webp" id="2_jsivw"]
 [ext_resource type="PackedScene" uid="uid://bjpgsqwyruv52" path="res://Scenes/trilho1.tscn" id="3_akgtl"]
 [ext_resource type="PackedScene" uid="uid://dqei8ock2xrc" path="res://Scenes/coluna2.tscn" id="6_bgq40"]
@@ -329,7 +329,7 @@ transform = Transform3D(1.11165, -1.04083e-14, 1.30385e-08, -2.62013e-14, -0.440
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.804, 2.28499, -11.4869)
 
 [node name="AnimationPlayer" parent="Moving_Train/AnimatableBody3D" index="2"]
-speed_scale = 0.2
+speed_scale = 0.3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Moving_Train/AnimatableBody3D" index="3"]
 
