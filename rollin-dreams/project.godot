@@ -30,7 +30,7 @@ DSP/dsp_buffer_count=4
 
 config/name="Rollin Dreams"
 run/main_scene="res://Scenes/menu.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Textures/icon.png"
 
 [autoload]

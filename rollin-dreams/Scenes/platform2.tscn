@@ -56,7 +56,7 @@ glow_enabled = true
 glow_intensity = 1.2
 glow_bloom = 0.2
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D2" type="Node3D"]
 
 [node name="grass" parent="." instance=ExtResource("1_d06sr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.347)

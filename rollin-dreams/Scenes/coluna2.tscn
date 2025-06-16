@@ -84,7 +84,7 @@ points = PackedVector3Array(0.457871, 0.198079, 0.0157824, -0.48874, -0.0916874,
 [sub_resource type="BoxShape3D" id="BoxShape3D_imh2o"]
 size = Vector3(1.54788, 1.40698, 1.54468)
 
-[node name="Node3D2" type="Node3D"]
+[node name="Node3D3" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
