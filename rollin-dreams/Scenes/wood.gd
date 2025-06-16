@@ -1,60 +1,45 @@
-extends Area3D
-@export var sound_emitter_path: NodePath = "WoodSoundEmitter"  # Path to FmodEventEmitter3D
-@export var movement_threshold: float = 0.1  # Minimum velocity to consider as "moving"
+extends TextureButton
 
-var player_in_area: CharacterBody3D = null
-var sound_emitter = null
-var is_sound_playing: bool = false
+@onready var tween          := create_tween()
+@onready var anim_player    := $"../CanvasLayer/AnimationPlayer"
+@onready var clouds1        := $"../CanvasLayer/CloudTransition1"
+@onready var clouds2        := $"../CanvasLayer/CloudTransition2"
+@onready var clouds3        := $"../CanvasLayer/CloudTransition3"
+@onready var clouds4        := $"../CanvasLayer/CloudTransition4"
+@onready var texture_story  := $"../TextureStory"
+@onready var canvas_layer   := $"../CanvasLayer"  # <- referência direta ao CanvasLayer
 
-func _ready():
-	body_entered.connect(_on_body_entered)
-	body_exited.connect(_on_body_exited)
-	sound_emitter = get_node_or_null(sound_emitter_path)
-	if not sound_emitter:
-		push_warning("FmodEventEmitter3D not found at: ", sound_emitter_path)
+var normal_scale := Vector2(0.8, 0.8)
+var hover_scale  := Vector2(0.82, 0.82)
 
-func _process(_delta):
-	# Check if player is in area and monitor their movement
-	if player_in_area:
-		check_player_movement()
+func _ready() -> void:
+	scale = normal_scale
+	texture_story.hide()                     # começa invisível
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
-func _on_body_entered(body):
-	if body.has_method("enterJuice"):
-		player_in_area = body
-		print("Player entered wood area")
+	# posiciona as nuvens fora da tela
+	clouds1.position = Vector2(-1774, -1018)
+	clouds2.position = Vector2(-1089,   605)
+	clouds3.position = Vector2( 1313,   358)
+	clouds4.position = Vector2( 1539,  -927)
 
-func _on_body_exited(body):
-	if body.has_method("exitJuice"):
-		player_in_area = null
-		stop_sound()
-		print("Player exited wood area")
+func _on_mouse_entered() -> void:
+	tween.kill()
+	tween = create_tween()
+	tween.tween_property(self, "scale", hover_scale, 0.2)
 
-func check_player_movement():
-	if not player_in_area:
-		return
-	
-	# Get horizontal velocity (ignore Y component for jumping)
-	var horizontal_velocity = Vector3(player_in_area.velocity.x, 0, player_in_area.velocity.z)
-	var is_moving = horizontal_velocity.length() > movement_threshold
-	
-	# Only play sound if player is moving and on the floor
-	var should_play_sound = is_moving and player_in_area.is_on_floor()
-	
-	if should_play_sound and not is_sound_playing:
-		play_sound()
-	elif not should_play_sound and is_sound_playing:
-		stop_sound()
+func _on_mouse_exited() -> void:
+	tween.kill()
+	tween = create_tween()
+	tween.tween_property(self, "scale", normal_scale, 0.2)
 
-func play_sound():
-	if sound_emitter:
-		sound_emitter.play()
-		is_sound_playing = true
-		print("Wood sound started")
-	else:
-		push_warning("FmodEventEmitter3D not found at: ", sound_emitter_path)
+func _on_pressed() -> void:
+	disabled = true
+	anim_player.play("fade_out_with_clouds")
+	await anim_player.animation_finished
 
-func stop_sound():
-	if sound_emitter:
-		sound_emitter.stop()
-	is_sound_playing = false
-	print("Wood sound stopped")
+	canvas_layer.hide()       # <- esconde o CanvasLayer (transição e nuvens)
+	texture_story.show()      # <- mostra a imagem de história
+	await get_tree().create_timer(3.0).timeout
+
+	get_tree().call_deferred("change_scene_to_file", "res://Scenes/platform1.tscn")
