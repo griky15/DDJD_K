@@ -657,6 +657,7 @@ script = ExtResource("21_jmn71")
 [node name="JuiceSoundEmitter" type="FmodEventEmitter3D" parent="Juice"]
 event_name = "event:/Stick Movement"
 event_guid = "{a27a3161-5cf1-4568-83ab-33859fa82971}"
+volume = 0.4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.998937, -0.530543, -3.28377)
 
 [node name="Juice2" type="MeshInstance3D" parent="Juice"]
@@ -691,6 +692,7 @@ visible = false
 event_name = "event:/Level 2 Background Music/Music Level 2"
 event_guid = "{051a19b4-4168-4229-b7dd-e7948424bda2}"
 autoplay = true
+volume = 0.2
 
 [node name="Control" parent="." instance=ExtResource("22_kgox3")]
 

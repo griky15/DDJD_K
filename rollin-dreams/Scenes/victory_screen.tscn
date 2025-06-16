@@ -68,4 +68,13 @@ size_flags_horizontal = 6
 size_flags_vertical = 6
 text = "Main Menu"
 
+[node name="FmodListener3D" type="FmodListener3D" parent="."]
+
+[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="."]
+event_name = "event:/Music Menu"
+event_guid = "{a1076052-3c33-4e63-afc7-78beb417d06c}"
+
+[node name="FmodBankLoader" type="FmodBankLoader" parent="."]
+bank_paths = ["res://Banks/Desktop/Master.strings.bank", "res://Banks/Desktop/Master.bank", "res://Banks/Desktop/SFX.bank"]
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

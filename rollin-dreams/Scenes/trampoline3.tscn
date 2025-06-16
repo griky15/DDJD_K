@@ -69,3 +69,4 @@ shape = SubResource("ConcavePolygonShape3D_0qjuc")
 [node name="TrampolineSoundEmitter" type="FmodEventEmitter3D" parent="."]
 event_name = "event:/SFX/Trampoline"
 event_guid = "{4606ade2-b0b7-4898-9c02-fe09b3b30918}"
+volume = 0.6

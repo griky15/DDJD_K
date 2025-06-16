@@ -283,7 +283,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7321, -3.14166)
 transform = Transform3D(0.991086, 0, -0.133225, 0, 1, 0, 0.133225, 0, 0.991086, -2.51278, 1.59099, 0.0588478)
 
 [node name="FmodBankLoader" type="FmodBankLoader" parent="."]
-bank_paths = ["res://Banks/Desktop/Master.strings.bank", "res://Banks/Desktop/Master.bank", "res://Banks/Desktop/SFX.bank"]
+bank_paths = ["res://Banks/Desktop/Master.strings.bank", "res://Banks/Desktop/Master.bank", "res://Banks/Desktop/SFX.bank", "res://Banks/Desktop/spikes.bank"]
 
 [node name="Node3D9" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0930045, 0.229599, -0.369115)
@@ -366,3 +366,59 @@ player = NodePath("../Player")
 
 [node name="Sky" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_lmxh7")
+
+[node name="Node3D37" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85085, 0.229599, -0.369115)
+
+[node name="Spikes2" parent="Node3D37" instance=ExtResource("16_e8tv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.280032, -0.0072484, 0.00161904)
+
+[node name="Spikes3" parent="Node3D37" instance=ExtResource("16_e8tv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.315352, -0.000760972, 0.672489)
+
+[node name="Spikes4" parent="Node3D37" instance=ExtResource("16_e8tv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.131228, -0.00826138, 0.223474)
+
+[node name="Spikes5" parent="Node3D37" instance=ExtResource("16_e8tv8")]
+
+[node name="Spikes6" parent="Node3D37" instance=ExtResource("16_e8tv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0930045, -0.00760689, 0.402132)
+
+[node name="Spikes" parent="Node3D37" instance=ExtResource("16_e8tv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.724647)
+
+[node name="Spikes7" parent="Node3D37" instance=ExtResource("16_e8tv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0414259, -0.000332236, 0.142204)
+
+[node name="Spikes9" parent="Node3D37" instance=ExtResource("16_e8tv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.144282, 0.004035, 0.68446)
+
+[node name="Spikes10" parent="Node3D37" instance=ExtResource("16_e8tv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.517175)
+
+[node name="Spikes11" parent="Node3D37" instance=ExtResource("16_e8tv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.133855, 0, 0.546071)
+
+[node name="Spikes12" parent="Node3D37" instance=ExtResource("16_e8tv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.275582, 0.015794, 0.238844)
+
+[node name="Spikes13" parent="Node3D37" instance=ExtResource("16_e8tv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.297803)
+
+[node name="Spikes14" parent="Node3D37" instance=ExtResource("16_e8tv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.160066, 0, 0.100136)
+
+[node name="Spikes15" parent="Node3D37" instance=ExtResource("16_e8tv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.243513, 0, 0.392132)
+
+[node name="Spikes16" parent="Node3D37" instance=ExtResource("16_e8tv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0653265, 0, 0.130982)
+
+[node name="Spikes17" parent="Node3D37" instance=ExtResource("16_e8tv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0406484, 0, 0.620387)
+
+[node name="Spikes18" parent="Node3D37" instance=ExtResource("16_e8tv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.147536, 0, 0.005063)
+
+[node name="Spikes8" parent="Node3D37" instance=ExtResource("16_e8tv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.272423, 0.0344937, 0.513992)

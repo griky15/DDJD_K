@@ -71,3 +71,4 @@ skeleton = NodePath("../../..")
 [node name="GrassSoundEmitter" type="FmodEventEmitter3D" parent="StaticBody3D/Area3D"]
 event_name = "event:/Marble Rolling on Grass Combined"
 event_guid = "{011ac576-460d-461d-91dc-e5e35d973e56}"
+volume = 0.2

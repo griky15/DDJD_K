@@ -88,6 +88,7 @@ shape = SubResource("ConcavePolygonShape3D_6laa3")
 [node name="WoodSoundEmitter" type="FmodEventEmitter3D" parent="MeshInstance3D/Area3D"]
 event_name = "event:/Marble Rolling"
 event_guid = "{7fd93025-084c-4eb1-bb32-956a0779c930}"
+volume = 0.2
 
 [node name="star2" parent="." instance=ExtResource("2_vaoph")]
 transform = Transform3D(0.0487451, 0.0111319, 0, -0.0111319, 0.0487451, 0, 0, 0, 0.05, 0.00035622, 0.49996, 0.506)

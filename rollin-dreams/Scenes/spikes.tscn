@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c5tthpc56d07r"]
 
-[ext_resource type="Script" path="res://Scenes/Spikes.gd" id="1_a5dqs"]
+[ext_resource type="Script" uid="uid://unsjlv1r573f" path="res://Scenes/Spikes.gd" id="1_a5dqs"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_m37uh"]
 lightmap_size_hint = Vector2i(5, 7)
@@ -24,3 +24,8 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.246603, 0)
 shape = SubResource("ConvexPolygonShape3D_a5dqs")
+
+[node name="SpikeEventEmitter" type="FmodEventEmitter3D" parent="Area3D"]
+event_name = "event:/Spikes"
+event_guid = "{e6df5eda-7630-4093-8688-1f302a434975}"
+volume = 0.8

@@ -146,3 +146,4 @@ shape = SubResource("BoxShape3D_d46d2")
 [node name="WoodSoundEmitter" type="FmodEventEmitter3D" parent="StaticBody3D/Area3D"]
 event_name = "event:/Marble Rolling"
 event_guid = "{7fd93025-084c-4eb1-bb32-956a0779c930}"
+volume = 0.4

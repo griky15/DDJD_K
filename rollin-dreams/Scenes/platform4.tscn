@@ -19,8 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://qwcjooblaj2m" path="res://Scenes/pause.tscn" id="18_ogxw8"]
 [ext_resource type="PackedScene" uid="uid://b4wwrp12hlxj" path="res://Scenes/Timer.tscn" id="19_j2rcf"]
 [ext_resource type="PackedScene" uid="uid://hu1or7ybtq4k" path="res://Scenes/portal.tscn" id="20_dskdg"]
+[ext_resource type="PackedScene" uid="uid://ctmmkj3fofstw" path="res://Scenes/victory_screen.tscn" id="21_dskdg"]
 [ext_resource type="Script" uid="uid://vnvwppetn0f1" path="res://Scripts/portal.gd" id="21_xivxe"]
-[ext_resource type="PackedScene" uid="uid://51uedbu4e8ks" path="res://Scenes/level1_menu.tscn" id="22_xivxe"]
 
 [sub_resource type="Curve3D" id="Curve3D_qj3xv"]
 _data = {
@@ -434,14 +434,14 @@ bank_paths = ["res://Banks/Desktop/Master.strings.bank", "res://Banks/Desktop/Ma
 event_name = "event:/Level 2 Background Music/Music Level 2"
 event_guid = "{051a19b4-4168-4229-b7dd-e7948424bda2}"
 autoplay = true
-volume = 0.0
+volume = 0.2
 
 [node name="Control" parent="." instance=ExtResource("19_j2rcf")]
 
 [node name="Node3D12" parent="." node_paths=PackedStringArray("player") instance=ExtResource("20_dskdg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.23749, 7.69745, 2.69041)
 script = ExtResource("21_xivxe")
-target_scene = ExtResource("22_xivxe")
+target_scene = ExtResource("21_dskdg")
 player = NodePath("../Player")
 
 [connection signal="curve_changed" from="trilho3" to="trilho3" method="_on_curve_changed"]
