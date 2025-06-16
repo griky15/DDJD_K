@@ -49,8 +49,10 @@ func _on_restart_pressed() -> void:
 	var current_scene = get_tree().current_scene.scene_file_path
 	var restart_scene = "res://Scenes/platform1.tscn"  # Padrão
 	
-	# Verifica se está em platform2 ou platform4
-	if current_scene == "res://Scenes/platform2.tscn" or current_scene == "res://Scenes/platform4.tscn":
+	# Verifica qual cena está ativa e define o restart apropriado
+	if current_scene == "res://Scenes/level_1.tscn":
+		restart_scene = "res://Scenes/level_1.tscn"
+	elif current_scene == "res://Scenes/platform2.tscn" or current_scene == "res://Scenes/platform4.tscn":
 		restart_scene = "res://Scenes/platform2.tscn"
 	
 	# Mudar de cena no próximo frame

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bhskvevcy6x4y"]
 
-[ext_resource type="Script" uid="uid://e5xnlbwo4nbk" path="res://Scenes/game_over.gd" id="1_ojehl"]
+[ext_resource type="Script" path="res://Scenes/game_over.gd" id="1_ojehl"]
 [ext_resource type="Texture2D" uid="uid://l7o15xr8oymh" path="res://Textures/Game_Over_Back.jpg" id="2_8fo1c"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_ek8ke"]

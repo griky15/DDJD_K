@@ -355,8 +355,10 @@ transform = Transform3D(-5.24537e-08, 0, 1.2, 0, 1.2, 0, -1.2, 0, -5.24537e-08, 
 [node name="bear" parent="." instance=ExtResource("5_8bkno")]
 transform = Transform3D(-0.499834, 0, -0.0128791, 0, 0.5, 0, 0.0128791, 0, -0.499834, 0.995046, 0.672712, 9.91157)
 
-[node name="Node3D2" parent="." instance=ExtResource("6_nh3gp")]
+[node name="Node3D2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_nh3gp")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -13.9309, 0.864525, 11.9993)
+script = ExtResource("17_ka580")
+player = NodePath("../Player")
 
 [node name="Node3D4" parent="." instance=ExtResource("7_gj6ef")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -8.333, 0.65, 14.897)
@@ -392,19 +394,19 @@ transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.48113, 0, 16.0627)
 
 [node name="grass" parent="grass43" instance=ExtResource("1_d06sr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1656, 4.33881, 7.22647)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1656, 3.83574, 7.05413)
 
 [node name="grass3" parent="grass43" instance=ExtResource("1_d06sr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1656, 4.33881, 7.22647)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1656, 3.83574, 7.05413)
 
 [node name="grass4" parent="grass43" instance=ExtResource("1_d06sr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1656, 4.33881, 8.22348)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1656, 3.83574, 8.05114)
 
 [node name="grass6" parent="grass43" instance=ExtResource("1_d06sr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1656, 4.33881, 8.22348)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1656, 3.83574, 8.05114)
 
 [node name="mushroom" parent="grass43" instance=ExtResource("2_145ep")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -1.30277, 5.08881, 7.23347)
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -1.30277, 4.58574, 7.06113)
 
 [node name="grass45" parent="." instance=ExtResource("1_d06sr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.48113, 0, 16.0627)
@@ -476,16 +478,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.48113, 0, 19.0597)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.48113, 0, 19.0597)
 
 [node name="grass" parent="grass100" instance=ExtResource("1_d06sr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.858127, 4.33881, 6.19195)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.858127, 3.83574, 6.01961)
 
 [node name="grass3" parent="grass100" instance=ExtResource("1_d06sr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.141873, 4.33881, 6.19195)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.141873, 3.83574, 6.01961)
 
 [node name="grass4" parent="grass100" instance=ExtResource("1_d06sr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.858127, 4.33881, 7.18894)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.858127, 3.83574, 7.0166)
 
 [node name="grass6" parent="grass100" instance=ExtResource("1_d06sr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.141873, 4.33881, 7.18894)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.141873, 3.83574, 7.0166)
 
 [node name="grass101" parent="." instance=ExtResource("1_d06sr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4811, 0, 19.0597)
@@ -502,11 +504,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.58143, 1.35, 18.8527)
 [node name="Node3D8" parent="." instance=ExtResource("12_dkgid")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8821, 0.585367, 17.677)
 
-[node name="Node3D9" parent="." instance=ExtResource("13_r3cdt")]
+[node name="Node3D9" parent="." node_paths=PackedStringArray("player") instance=ExtResource("13_r3cdt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.27123, 1, 17.4694)
+script = ExtResource("17_ka580")
+player = NodePath("../Player")
 
-[node name="Node3D10" parent="." instance=ExtResource("6_nh3gp")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9.04821, 5.05527, 25.7618)
+[node name="Node3D10" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_nh3gp")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9.04821, 4.5522, 25.5895)
+script = ExtResource("17_ka580")
+player = NodePath("../Player")
 
 [node name="Node3D11" parent="." node_paths=PackedStringArray("player") instance=ExtResource("13_jpmm1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.0529, 2.99351, 12.3889)

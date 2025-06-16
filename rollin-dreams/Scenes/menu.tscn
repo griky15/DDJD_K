@@ -307,6 +307,7 @@ libraries = {
 event_name = "event:/Music Menu"
 event_guid = "{a1076052-3c33-4e63-afc7-78beb417d06c}"
 autoplay = true
+volume = 0.2
 
 [node name="FmodListener3D" type="FmodListener3D" parent="."]
 
