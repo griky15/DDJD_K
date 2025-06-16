@@ -67,6 +67,7 @@ shape = SubResource("ConcavePolygonShape3D_odwlr")
 [node name="WoodSoundEmitter" type="FmodEventEmitter3D" parent="StaticBody3D/Area3D"]
 event_name = "event:/Marble Rolling"
 event_guid = "{7fd93025-084c-4eb1-bb32-956a0779c930}"
+volume = 0.4
 
 [node name="Area3D2" type="Area3D" parent="StaticBody3D"]
 script = ExtResource("3_ej2dt")
@@ -78,3 +79,4 @@ shape = SubResource("ConcavePolygonShape3D_ej2dt")
 [node name="WoodSoundEmitter" type="FmodEventEmitter3D" parent="StaticBody3D/Area3D2"]
 event_name = "event:/Marble Rolling"
 event_guid = "{7fd93025-084c-4eb1-bb32-956a0779c930}"
+volume = 0.4

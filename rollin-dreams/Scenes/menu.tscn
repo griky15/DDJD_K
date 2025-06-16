@@ -1,12 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://d2rfxret8lfjt"]
+[gd_scene load_steps=12 format=3 uid="uid://d2rfxret8lfjt"]
 
 [ext_resource type="Texture2D" uid="uid://dkr4yfsrlqws5" path="res://Textures/menu2.webp" id="1_i0ice"]
-[ext_resource type="Script" uid="uid://h8qtyb1ii6e4" path="res://Scripts/to_lvl1.gd" id="2_82kfo"]
+[ext_resource type="Script" path="res://Scripts/to_lvl1.gd" id="2_82kfo"]
 [ext_resource type="Texture2D" uid="uid://ji5igm6ta4e" path="res://Textures/start.png" id="2_wxfa3"]
 [ext_resource type="Texture2D" uid="uid://wih2a4rf1p7a" path="res://Textures/tutorial.png" id="4_0dgfe"]
 [ext_resource type="Texture2D" uid="uid://87odkgq3u2c4" path="res://Textures/cloud2.png" id="5_mqr2d"]
-[ext_resource type="Script" uid="uid://cnck1xub0cygk" path="res://Scripts/to_tutorial.gd" id="5_wbdvm"]
+[ext_resource type="Script" path="res://Scripts/to_tutorial.gd" id="5_wbdvm"]
 [ext_resource type="Texture2D" uid="uid://dpa5jhoucw0k6" path="res://Textures/cloud1.png" id="6_eqnfg"]
+[ext_resource type="Texture2D" uid="uid://clumh7hwqddy5" path="res://Textures/StoryLabel.png" id="8_qhlk5"]
 
 [sub_resource type="Animation" id="Animation_sye1k"]
 length = 0.001
@@ -221,8 +222,8 @@ tracks/7/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f6j0m"]
 _data = {
-&"RESET": SubResource("Animation_sye1k"),
-&"fade_out_with_clouds": SubResource("Animation_f6dyo")
+"RESET": SubResource("Animation_sye1k"),
+"fade_out_with_clouds": SubResource("Animation_f6dyo")
 }
 
 [node name="Menu" type="Node2D"]
@@ -267,7 +268,6 @@ texture_normal = ExtResource("4_0dgfe")
 script = ExtResource("5_wbdvm")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Control"]
-visible = false
 
 [node name="CloudTransition1" type="TextureRect" parent="Control/CanvasLayer"]
 offset_left = -461.0
@@ -300,18 +300,60 @@ texture = ExtResource("6_eqnfg")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Control/CanvasLayer"]
 root_node = NodePath("../..")
 libraries = {
-&"": SubResource("AnimationLibrary_f6j0m")
+"": SubResource("AnimationLibrary_f6j0m")
 }
 
+[node name="TextureStory" type="TextureRect" parent="Control"]
+visible = false
+offset_left = -4.0
+offset_top = -299.0
+offset_right = 1972.0
+offset_bottom = 1012.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("8_qhlk5")
+stretch_mode = 6
+
 [node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 event_name = "event:/Music Menu"
 event_guid = "{a1076052-3c33-4e63-afc7-78beb417d06c}"
 autoplay = true
+volume = 0.2
+script = null
 
 [node name="FmodListener3D" type="FmodListener3D" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
+script = null
 
 [node name="FmodBankLoader" type="FmodBankLoader" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 bank_paths = ["res://Banks/Desktop/Master.strings.bank", "res://Banks/Desktop/Master.bank", "res://Banks/Desktop/SFX.bank"]
+script = null
 
 [connection signal="mouse_entered" from="Control/Start" to="Control/Start" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Control/Start" to="Control/Start" method="_on_mouse_exited"]

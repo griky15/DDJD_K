@@ -513,4 +513,4 @@ shape = SubResource("ConvexPolygonShape3D_ykf2y")
 event_name = "event:/SFX/Train"
 event_guid = "{0fe41873-614b-4942-8a9e-7b8d53bf6d7c}"
 autoplay = true
-volume = 0.0
+volume = 0.2

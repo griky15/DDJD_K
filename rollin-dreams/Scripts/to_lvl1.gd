@@ -5,6 +5,7 @@ extends TextureButton
 @onready var clouds2 := $"../CanvasLayer/CloudTransition2"
 @onready var clouds3 := $"../CanvasLayer/CloudTransition3"
 @onready var clouds4 := $"../CanvasLayer/CloudTransition4"
+@onready var texture_story  := $"../TextureStory"
 
 var normal_scale := Vector2(0.8, 0.8)
 var hover_scale := Vector2(0.82, 0.82)
@@ -31,4 +32,10 @@ func _on_pressed() -> void:
 	disabled = true
 	anim_player.play("fade_out_with_clouds")
 	await anim_player.animation_finished
-	get_tree().call_deferred("change_scene_to_file", "res://Scenes/story.tscn")
+	texture_story.show()
+	clouds1.hide()
+	clouds2.hide()
+	clouds3.hide()
+	clouds4.hide()
+	await get_tree().create_timer(5.0).timeout 
+	get_tree().call_deferred("change_scene_to_file", "res://Scenes/platform1.tscn")

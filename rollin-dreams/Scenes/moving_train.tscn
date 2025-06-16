@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://exh1gpeal6rs"]
 
-[ext_resource type="PackedScene" uid="uid://chbt6lqcus7jc" path="res://Scenes/train.tscn" id="1_iye66"]
+[ext_resource type="PackedScene" uid="uid://boev4o68sjwca" path="res://Scenes/train.tscn" id="1_iye66"]
 [ext_resource type="PackedScene" uid="uid://d1s57dm3mdwpd" path="res://Scenes/train3.tscn" id="2_ijfsi"]
 
 [sub_resource type="Curve3D" id="Curve3D_wohy6"]
