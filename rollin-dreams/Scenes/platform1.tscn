@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://kitugyn5ghbg"]
+[gd_scene load_steps=26 format=3 uid="uid://kitugyn5ghbg"]
 
 [ext_resource type="PackedScene" uid="uid://bm3aiewi1ct1j" path="res://Scenes/Cloud.tscn" id="1_q8j7a"]
 [ext_resource type="PackedScene" uid="uid://b17cx1un7ugcf" path="res://Scenes/Block.tscn" id="2_87vd0"]
@@ -21,6 +21,20 @@
 [ext_resource type="PackedScene" uid="uid://hu1or7ybtq4k" path="res://Scenes/portal.tscn" id="19_uift0"]
 [ext_resource type="Script" uid="uid://vnvwppetn0f1" path="res://Scripts/portal.gd" id="20_dnwlg"]
 [ext_resource type="PackedScene" uid="uid://51uedbu4e8ks" path="res://Scenes/level1_menu.tscn" id="21_wg2hs"]
+[ext_resource type="Texture2D" uid="uid://d3wt0fipymvwk" path="res://Textures/industrial_sunset_puresky_2k.exr" id="22_o3rn3"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_a70w8"]
+panorama = ExtResource("22_o3rn3")
+
+[sub_resource type="Sky" id="Sky_1elkv"]
+sky_material = SubResource("PanoramaSkyMaterial_a70w8")
+
+[sub_resource type="Environment" id="Environment_lmxh7"]
+background_mode = 2
+sky = SubResource("Sky_1elkv")
+glow_enabled = true
+glow_intensity = 1.2
+glow_bloom = 0.2
 
 [node name="circuito3" type="Node3D"]
 
@@ -349,3 +363,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.60003, 2.38868, 32.5148)
 script = ExtResource("20_dnwlg")
 target_scene = ExtResource("21_wg2hs")
 player = NodePath("../Player")
+
+[node name="Sky" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_lmxh7")
