@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://dw2yptxahu735"]
+[gd_scene load_steps=41 format=3 uid="uid://dw2yptxahu735"]
 
 [ext_resource type="Script" uid="uid://cpq28o0hffbo5" path="res://Scripts/trilho_1.gd" id="1_qqec5"]
 [ext_resource type="Texture2D" uid="uid://xah045shsb7h" path="res://Textures/wood.webp" id="2_jsivw"]
@@ -16,9 +16,12 @@
 [ext_resource type="PackedScene" uid="uid://bj6i1l2e2ojsn" path="res://Scenes/Player.tscn" id="14_mnjf6"]
 [ext_resource type="Script" uid="uid://s6bxriq80kdw" path="res://Scripts/camera_3d.gd" id="15_bnldx"]
 [ext_resource type="Texture2D" uid="uid://d3wt0fipymvwk" path="res://Textures/industrial_sunset_puresky_2k.exr" id="16_ae8h3"]
-[ext_resource type="Script" path="res://Scenes/candy_manager.gd" id="17_ae8h3"]
+[ext_resource type="Script" uid="uid://b1x7wav8cwl8l" path="res://Scenes/candy_manager.gd" id="17_ae8h3"]
 [ext_resource type="PackedScene" uid="uid://qwcjooblaj2m" path="res://Scenes/pause.tscn" id="18_ogxw8"]
 [ext_resource type="PackedScene" uid="uid://b4wwrp12hlxj" path="res://Scenes/Timer.tscn" id="19_j2rcf"]
+[ext_resource type="PackedScene" uid="uid://hu1or7ybtq4k" path="res://Scenes/portal.tscn" id="20_dskdg"]
+[ext_resource type="Script" uid="uid://vnvwppetn0f1" path="res://Scripts/portal.gd" id="21_xivxe"]
+[ext_resource type="PackedScene" uid="uid://51uedbu4e8ks" path="res://Scenes/level1_menu.tscn" id="22_xivxe"]
 
 [sub_resource type="Curve3D" id="Curve3D_qj3xv"]
 _data = {
@@ -366,7 +369,7 @@ curve = SubResource("Curve3D_igcvn")
 transform = Transform3D(-0.988827, 0.103151, -0.106071, -1.1174e-08, 0.71674, 0.697096, 0.147957, 0.689378, -0.708893, -0.249123, 1.86879, -2.09625)
 
 [node name="AnimatableBody3D" parent="Moving_Train2" index="1"]
-transform = Transform3D(0.112868, 0.103151, -0.988074, -0.697079, 0.71674, -0.00479368, 0.707859, 0.689378, 0.152828, -0.249123, 1.86879, -2.09625)
+transform = Transform3D(0.112868, 0.103151, -0.988074, -0.697079, 0.71674, -0.0047937, 0.707859, 0.689378, 0.152828, -0.249123, 1.86879, -2.09625)
 
 [node name="Moving_Train3" parent="." instance=ExtResource("11_6yvrd")]
 transform = Transform3D(0.126459, 0, -0.991972, 0, 1, 0, 0.991972, 0, 0.126459, -33.6392, 0.719844, -33.1579)
@@ -457,6 +460,12 @@ autoplay = true
 volume = 0.0
 
 [node name="Control" parent="." instance=ExtResource("19_j2rcf")]
+
+[node name="Node3D12" parent="." node_paths=PackedStringArray("player") instance=ExtResource("20_dskdg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.23749, 7.69745, 2.69041)
+script = ExtResource("21_xivxe")
+target_scene = ExtResource("22_xivxe")
+player = NodePath("../Player")
 
 [connection signal="curve_changed" from="trilho3" to="trilho3" method="_on_curve_changed"]
 [connection signal="curve_changed" from="trilho2" to="trilho2" method="_on_curve_changed"]
