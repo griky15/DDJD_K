@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://kitugyn5ghbg"]
+[gd_scene load_steps=22 format=3 uid="uid://kitugyn5ghbg"]
 
 [ext_resource type="PackedScene" uid="uid://bm3aiewi1ct1j" path="res://Scenes/Cloud.tscn" id="1_q8j7a"]
 [ext_resource type="PackedScene" uid="uid://b17cx1un7ugcf" path="res://Scenes/Block.tscn" id="2_87vd0"]
@@ -18,6 +18,9 @@
 [ext_resource type="PackedScene" uid="uid://c5tthpc56d07r" path="res://Scenes/spikes.tscn" id="16_e8tv8"]
 [ext_resource type="Script" uid="uid://cgrhuh5echv83" path="res://Scripts/timer.gd" id="17_uf7x8"]
 [ext_resource type="PackedScene" uid="uid://qwcjooblaj2m" path="res://Scenes/pause.tscn" id="18_taear"]
+[ext_resource type="PackedScene" uid="uid://hu1or7ybtq4k" path="res://Scenes/portal.tscn" id="19_uift0"]
+[ext_resource type="Script" uid="uid://vnvwppetn0f1" path="res://Scripts/portal.gd" id="20_dnwlg"]
+[ext_resource type="PackedScene" uid="uid://51uedbu4e8ks" path="res://Scenes/level1_menu.tscn" id="21_wg2hs"]
 
 [node name="circuito3" type="Node3D"]
 
@@ -338,3 +341,9 @@ offset_bottom = 23.0
 
 [node name="Pause" parent="." instance=ExtResource("18_taear")]
 visible = false
+
+[node name="Portal" parent="." node_paths=PackedStringArray("player") instance=ExtResource("19_uift0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.60003, 2.38868, 32.5148)
+script = ExtResource("20_dnwlg")
+target_scene = ExtResource("21_wg2hs")
+player = NodePath("../Player")

@@ -8,6 +8,14 @@ extends Control
 var time_left = 40
 
 func _ready():
+	# Verifica qual cena está ativa e define o tempo inicial
+	var current_scene = get_tree().current_scene.scene_file_path
+	
+	if current_scene == "res://Scenes/platform4.tscn":
+		time_left = 30  # Começa com 30 segundos na platform4
+	else:
+		time_left = 40  # Tempo padrão para outras cenas
+	
 	# Configura o timer para contar a cada 1 segundo
 	countdown_timer.wait_time = 1.0
 	countdown_timer.timeout.connect(_on_timer_timeout)
@@ -36,5 +44,4 @@ func update_timer_display():
 
 func change_scene():
 	# Muda para a próxima cena
-	# Substitua "res://proxima_cena.tscn" pelo caminho da sua cena
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")

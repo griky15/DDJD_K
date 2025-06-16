@@ -14,6 +14,11 @@ func _ready():
 	else:
 		current_speed = SPEED
 
+	var mesh_instance = $MeshInstance3D
+	var material = StandardMaterial3D.new()
+	material.albedo_texture = load("res://Textures/water.png")
+	mesh_instance.set_surface_override_material(0, material)
+
 func _physics_process(delta: float) -> void:
 	# Verifica se o player caiu muito baixo
 	if global_position.y < FALL_LIMIT:
@@ -40,6 +45,16 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, current_speed)
 	
 	move_and_slide()
+	
+		# Aplica rotação para simular o rolamento da bola
+	var horizontal_velocity = Vector3(velocity.x, 0, velocity.z)
+	if horizontal_velocity.length() > 0.01:
+		var camera = get_viewport().get_camera_3d()
+		var local_velocity = camera.global_transform.basis.inverse() * horizontal_velocity
+		var rotation_axis = local_velocity.cross(Vector3.UP).normalized()
+		var rotation_amount = local_velocity.length() * delta / $MeshInstance3D.scale.y
+		$MeshInstance3D.rotate(rotation_axis, -rotation_amount)
+
 
 func game_over():
 	# Verifica se está no level_1 para decidir para onde ir

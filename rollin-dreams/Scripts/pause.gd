@@ -45,5 +45,13 @@ func _on_restart_pressed() -> void:
 	get_tree().paused = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
+	# Obtém o nome da cena atual
+	var current_scene = get_tree().current_scene.scene_file_path
+	var restart_scene = "res://Scenes/platform1.tscn"  # Padrão
+	
+	# Verifica se está em platform2 ou platform4
+	if current_scene == "res://Scenes/platform2.tscn" or current_scene == "res://Scenes/platform4.tscn":
+		restart_scene = "res://Scenes/platform2.tscn"
+	
 	# Mudar de cena no próximo frame
-	get_tree().call_deferred("change_scene_to_file", "res://Scenes/platform1.tscn")
+	get_tree().call_deferred("change_scene_to_file", restart_scene)

@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://hu1or7ybtq4k" path="res://Scenes/portal.tscn" id="13_jpmm1"]
 [ext_resource type="PackedScene" uid="uid://cs5daiejhgayh" path="res://Scenes/trampoline2.tscn" id="13_r3cdt"]
 [ext_resource type="Script" uid="uid://vnvwppetn0f1" path="res://Scripts/portal.gd" id="14_xd0ow"]
-[ext_resource type="PackedScene" uid="uid://d2rfxret8lfjt" path="res://Scenes/menu.tscn" id="15_q8woj"]
+[ext_resource type="PackedScene" uid="uid://dw2yptxahu735" path="res://Scenes/platform4.tscn" id="15_kgox3"]
 [ext_resource type="Script" uid="uid://cq6jr2w0q1wiv" path="res://Scripts/trampoline.gd" id="17_ka580"]
 [ext_resource type="Script" uid="uid://cma3syyqv5fkj" path="res://Scripts/juice.gd" id="21_jmn71"]
 [ext_resource type="PackedScene" uid="uid://qwcjooblaj2m" path="res://Scenes/pause.tscn" id="21_kgox3"]
@@ -511,7 +511,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9.04821, 5.05527, 25.7
 [node name="Node3D11" parent="." node_paths=PackedStringArray("player") instance=ExtResource("13_jpmm1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.0529, 2.99351, 12.3889)
 script = ExtResource("14_xd0ow")
-target_scene = ExtResource("15_q8woj")
+target_scene = ExtResource("15_kgox3")
 player = NodePath("../Player")
 
 [node name="grass122" parent="." instance=ExtResource("1_d06sr")]
