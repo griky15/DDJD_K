@@ -31,4 +31,4 @@ func _on_pressed() -> void:
 	disabled = true
 	anim_player.play("fade_out_with_clouds")
 	await anim_player.animation_finished
-	get_tree().call_deferred("change_scene_to_file", "res://Scenes/platform1.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://Scenes/story.tscn")

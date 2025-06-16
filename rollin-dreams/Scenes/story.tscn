@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://nq7skkwwaxpi"]
+
+[ext_resource type="Texture2D" uid="uid://ve0bbdw7bleo" path="res://Textures/story.jpg" id="1_pwpkg"]
+[ext_resource type="Script" uid="uid://c7yy8jx34b6ho" path="res://Scripts/story.gd" id="2_y0hhn"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1930.0
+offset_bottom = 1030.0
+texture = ExtResource("1_pwpkg")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1134.0
+offset_top = 364.0
+offset_right = 1366.0
+offset_bottom = 455.0
+theme_override_font_sizes/font_size = 60
+text = "PLAY"
+script = ExtResource("2_y0hhn")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

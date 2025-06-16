@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://ctmmkj3fofstw"]
+[gd_scene load_steps=9 format=3 uid="uid://ctmmkj3fofstw"]
 
 [ext_resource type="Script" uid="uid://dn1rqxs5nhqe1" path="res://Scripts/victory_screen.gd" id="1_oq8vb"]
+[ext_resource type="Texture2D" uid="uid://ciohgehhpya06" path="res://Textures/victory.jpg" id="2_mubwb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3mmu"]
 albedo_color = Color(0.409441, 0.703861, 0.755799, 1)
@@ -32,6 +33,11 @@ albedo_color = Color(0.309804, 0.87451, 0.764706, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9092, 0)
 script = ExtResource("1_oq8vb")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1915.0
+offset_bottom = 1024.0
+texture = ExtResource("2_mubwb")
+
 [node name="Victory" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.233382, 0)
 mesh = SubResource("TextMesh_oq8vb")
@@ -58,10 +64,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -74.0
-offset_top = -73.0
-offset_right = 77.0
-offset_bottom = -19.0
+offset_left = -461.0
+offset_top = -403.0
+offset_right = -310.0
+offset_bottom = -349.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 6
