@@ -36,7 +36,7 @@ glow_enabled = true
 glow_intensity = 1.2
 glow_bloom = 0.2
 
-[node name="circuito4" type="Node3D"]
+[node name="circuito5" type="Node3D"]
 
 [node name="cloud" parent="." instance=ExtResource("1_q8j7a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.23491, 3.35377, -1.7806)

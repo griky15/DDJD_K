@@ -23,7 +23,7 @@ func _ready():
 	
 	var mesh_instance = $MeshInstance3D
 	var material = StandardMaterial3D.new()
-	material.albedo_texture = load("res://Textures/water.png")
+	material.albedo_texture = load("res://Textures/red3.png")
 	mesh_instance.set_surface_override_material(0, material)
 
 func _physics_process(delta: float) -> void:
