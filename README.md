@@ -3,3 +3,5 @@
 - David Castro
 - Guilherme Cruz
 - Raghad Nahas
+- --------------------------------------
+To view the project files please pull bb-branch 
