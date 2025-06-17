@@ -1,6 +1,6 @@
-[gd_scene load_steps=40 format=3 uid="uid://dw2yptxahu735"]
+[gd_scene load_steps=41 format=3 uid="uid://dw2yptxahu735"]
 
-[ext_resource type="Script" uid="uid://ddj4pvelf6r20" path="res://Scripts/trilho_1.gd" id="1_qqec5"]
+[ext_resource type="Script" uid="uid://cpq28o0hffbo5" path="res://Scripts/trilho_1.gd" id="1_qqec5"]
 [ext_resource type="Texture2D" uid="uid://xah045shsb7h" path="res://Textures/wood.webp" id="2_jsivw"]
 [ext_resource type="PackedScene" uid="uid://bjpgsqwyruv52" path="res://Scenes/trilho1.tscn" id="3_akgtl"]
 [ext_resource type="PackedScene" uid="uid://dqei8ock2xrc" path="res://Scenes/coluna2.tscn" id="6_bgq40"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://c4q15vdnufmik" path="res://Scenes/grass.tscn" id="12_lp4rt"]
 [ext_resource type="PackedScene" uid="uid://v1ygupa3qmmm" path="res://Scenes/trampoline.tscn" id="13_mnjf6"]
 [ext_resource type="PackedScene" uid="uid://bj6i1l2e2ojsn" path="res://Scenes/Player.tscn" id="14_mnjf6"]
+[ext_resource type="Script" uid="uid://cq6jr2w0q1wiv" path="res://Scripts/trampoline.gd" id="14_xivxe"]
 [ext_resource type="Script" uid="uid://s6bxriq80kdw" path="res://Scripts/camera_3d.gd" id="15_bnldx"]
 [ext_resource type="Texture2D" uid="uid://d3wt0fipymvwk" path="res://Textures/industrial_sunset_puresky_2k.exr" id="16_ae8h3"]
 [ext_resource type="PackedScene" uid="uid://qwcjooblaj2m" path="res://Scenes/pause.tscn" id="18_ogxw8"]
@@ -348,8 +349,10 @@ transform = Transform3D(2.2935, 0, 0, 0, 1.60996, 0, 0, 0, 2.10363, 13.3269, 2.2
 [node name="grass4" parent="." instance=ExtResource("12_lp4rt")]
 transform = Transform3D(2.2935, 0, 0, 0, 1.60996, 0, 0, 0, 2.10363, 13.3269, 2.22048, 3.71359)
 
-[node name="Node3D9" parent="." instance=ExtResource("13_mnjf6")]
+[node name="Node3D9" parent="." node_paths=PackedStringArray("player") instance=ExtResource("13_mnjf6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.212, 3.35139, 2.66516)
+script = ExtResource("14_xivxe")
+player = NodePath("../Player")
 
 [node name="star8" parent="." instance=ExtResource("7_oef7s")]
 transform = Transform3D(-0.0412495, 0, 0.287721, 0, 0.739934, 0, -0.24839, 0, -0.0477811, 7.02472, 10.8485, -2.62002)
@@ -368,7 +371,10 @@ curve = SubResource("Curve3D_igcvn")
 transform = Transform3D(-0.988827, 0.103151, -0.106071, -1.1174e-08, 0.71674, 0.697096, 0.147957, 0.689378, -0.708893, -0.249123, 1.86879, -2.09625)
 
 [node name="AnimatableBody3D" parent="Moving_Train2" index="1"]
-transform = Transform3D(0.112868, 0.103151, -0.988074, -0.697079, 0.71674, -0.0047937, 0.707859, 0.689378, 0.152828, -0.249123, 1.86879, -2.09625)
+transform = Transform3D(0.112868, 0.103151, -0.988074, -0.697079, 0.71674, -0.00479368, 0.707859, 0.689378, 0.152828, -0.249123, 1.86879, -2.09625)
+
+[node name="AnimationPlayer" parent="Moving_Train2/AnimatableBody3D" index="2"]
+speed_scale = 0.3
 
 [node name="Moving_Train3" parent="." instance=ExtResource("11_6yvrd")]
 transform = Transform3D(0.126459, 0, -0.991972, 0, 1, 0, 0.991972, 0, 0.126459, -33.6392, 0.719844, -33.1579)
