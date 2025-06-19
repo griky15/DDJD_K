@@ -1,17 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4wwrp12hlxj"]
-
-[ext_resource type="Script" uid="uid://cgrhuh5echv83" path="res://Scripts/timer.gd" id="1_notwg"]
-
-[node name="Control" type="Control"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("1_notwg")
-
-[node name="TimerLabel" type="Label" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-
-[node name="CountdownTimer" type="Timer" parent="."]
+version https://git-lfs.github.com/spec/v1
+oid sha256:86d3d7ba1c8af588f44f4049d6ed18626ffc482ab6d2a8129cb7b74ffc7e4a38
+size 464

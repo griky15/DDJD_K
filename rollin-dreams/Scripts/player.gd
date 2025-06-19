@@ -1,5 +1,5 @@
 class_name Player extends CharacterBody3D
-const SPEED = 3.5
+const SPEED = 5
 const JUMP_VELOCITY = 6
 const FALL_LIMIT = -15
 var current_speed = SPEED
@@ -27,8 +27,9 @@ func _ready():
 	mesh_instance.set_surface_override_material(0, material)
 
 func _physics_process(delta: float) -> void:
+	var current_scene = get_tree().current_scene.scene_file_path
 	# Verifica se o player caiu muito baixo
-	if global_position.y < FALL_LIMIT:
+	if global_position.y < FALL_LIMIT && current_scene != "res://Scenes/level_1.tscn"  :
 		game_over()
 		return
 	

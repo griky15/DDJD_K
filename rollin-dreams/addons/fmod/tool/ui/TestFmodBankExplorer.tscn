@@ -1,12 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://f4i35731qm63"]
-
-[ext_resource type="PackedScene" uid="uid://nr38urn226al" path="res://addons/fmod/tool/ui/FmodBankExplorer.tscn" id="1_0ul6h"]
-
-[node name="TestFmodBankExplorer" type="Node2D"]
-
-[node name="FmodBankLoader" type="FmodBankLoader" parent="."]
-bank_paths = ["res://assets/Banks/Master.strings.bank", "res://assets/Banks/Master.bank", "res://assets/Banks/Music.bank", "res://assets/Banks/Vehicles.bank"]
-
-[node name="FmodBankExplorer" parent="FmodBankLoader" instance=ExtResource("1_0ul6h")]
-initial_position = 0
-position = Vector2i(0, 36)
+version https://git-lfs.github.com/spec/v1
+oid sha256:aec9b440fd97d530297062a2f79f2286628b1c740a3b00bf452019d17ffdb0eb
+size 594

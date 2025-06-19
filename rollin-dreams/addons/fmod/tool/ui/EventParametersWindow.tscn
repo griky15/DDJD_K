@@ -1,7 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://skp8awewyl85"]
-
-[ext_resource type="PackedScene" uid="uid://cppeyr1ke5wre" path="res://addons/fmod/tool/ui/EventParametersDisplay.tscn" id="1_clkxg"]
-
-[node name="EventParametersWindow" type="Window"]
-
-[node name="EventParametersDisplay" parent="." instance=ExtResource("1_clkxg")]
+version https://git-lfs.github.com/spec/v1
+oid sha256:90b9940c8a8a16e4edc08f97d6b8e4930e5bc234176577020256362a2925593e
+size 325

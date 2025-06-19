@@ -1,22 +1,3 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctn7rsjq6hyvh"]
-
-[ext_resource type="Texture2D" uid="uid://ve0bbdw7bleo" path="res://Textures/story.jpg" id="1_duas4"]
-[ext_resource type="Script" uid="uid://dwyphd4k2mwbe" path="res://Scripts/story.gd" id="2_5uxb2"]
-
-[node name="Node3D" type="Node3D"]
-
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1927.0
-offset_bottom = 996.0
-texture = ExtResource("1_duas4")
-
-[node name="Button" type="Button" parent="."]
-offset_left = 1105.0
-offset_top = 315.0
-offset_right = 1307.0
-offset_bottom = 418.0
-theme_override_font_sizes/font_size = 60
-text = "Play"
-script = ExtResource("2_5uxb2")
-
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+version https://git-lfs.github.com/spec/v1
+oid sha256:33ebaa59408f46e13097b43a2eee40f1574f0e019acc764ccb07415e876f5a6f
+size 726
