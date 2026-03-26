@@ -1,15 +1,15 @@
 # 🎮 Rollin Dreams
 
-## Sobre o Jogo
+## About the Game
 
-**Rollin Dreams** é um jogo de plataforma 3D vibrante e divertido desenvolvido em Godot. O jogador controla um personagem em um mundo cheio de desafios, coletáveis e mecânicas criativas. Com trampolins que impulsionam, trilhos que guiam, portais misteriosos e obstáculos perigosos, o objetivo é avançar pelos níveis coletando frutas e alcançando a vitória.
+**Rollin Dreams** is a vibrant and fun 3D platformer game developed in Godot. The player controls a character in a world full of challenges, collectibles, and creative mechanics. With trampolines that propel, rails that guide, mysterious portals, and dangerous obstacles, the goal is to advance through levels by collecting fruits and reaching victory.
 
-O jogo oferece uma experiência imersiva com:
-- **Mecânicas de Movimentação**: Movimento fluido com saltos, queda dinâmica e variação de velocidade por nível
-- **Elementos Interativos**: Trampolins para impulso, trilhos para navegação e portais para teleportação
-- **Colecíveis**: Frutas e estrelas espalhadas pelos níveis
-- **Sistema de Áudio**: Integração com FMOD para efeitos sonoros imersivos
-- **Múltiplos Níveis**: Diferentes ambientes com dificuldade progressiva
+The game offers an immersive experience with:
+- **Movement Mechanics**: Fluid movement with jumps, dynamic falling, and speed variations per level
+- **Interactive Elements**: Trampolines for propulsion, rails for navigation, and portals for teleportation
+- **Collectibles**: Fruits and stars scattered throughout the levels
+- **Audio System**: FMOD integration for immersive sound effects
+- **Multiple Levels**: Different environments with progressive difficulty
 
 ---
 
@@ -21,7 +21,7 @@ O jogo oferece uma experiência imersiva com:
 
 ---
 
-## Time
+## Team
 
 - **Bianca Oliveira**
 - **David Castro**
@@ -30,31 +30,31 @@ O jogo oferece uma experiência imersiva com:
 
 ---
 
-## Tecnologias
+## Technologies
 
 - **Engine**: Godot 4.x
-- **Linguagem**: GDScript
-- **Áudio**: FMOD Studio
-- **Modelagem 3D**: Modelos .glb
+- **Language**: GDScript
+- **Audio**: FMOD Studio
+- **3D Modeling**: .glb Models
 
-## Estrutura do Projeto
+## Project Structure
 
 ```
 rollin-dreams/
-├── Scenes/          # Cenas do jogo (níveis, menu, UI)
-├── Scripts/         # Lógica em GDScript
-├── Textures/        # Texturas e materiais
-├── Audio/           # Arquivos de áudio
-├── Banks/           # Banks FMOD compilados
-└── Object/          # Modelos 3D
+├── Scenes/          # Game scenes (levels, menu, UI)
+├── Scripts/         # GDScript logic
+├── Textures/        # Textures and materials
+├── Audio/           # Audio files
+├── Banks/           # Compiled FMOD banks
+└── Object/          # 3D models
 ```
 
-## Como Executar
+## How to Run
 
-1. Abra o projeto em Godot 4.x
-2. Navegue para a cena principal (menu)
-3. Clique em "Play" para iniciar o jogo
+1. Open the project in Godot 4.x
+2. Navigate to the main scene (menu)
+3. Click "Play" to start the game
 
 ---
 
-Desenvolvido para **DDJD - Game Development Project**
+Developed for **DDJD - Game Development Project**
